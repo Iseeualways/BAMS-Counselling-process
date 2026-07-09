@@ -1,0 +1,3502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET-UG BAMS Counselling 2025 | LearnTech</title>
+    <!-- Google Font & Bootstrap 5 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* ===================== TOKENS ===================== */
+        :root {
+            --ink: #1B2559;
+            --ink-soft: #36408B;
+            --cream: #F8FAFF;
+            --cream-2: #EEF3FF;
+            --green: #4F7CFF;
+            --green-light: #7BA2FF;
+            --gold: #FF5FA2;
+            --gold-light: #FF8DC0;
+            --rust: #ef467e;
+            --rust-light: #F472B6;
+            --sage: #F4F0FF;
+            --white: #FFFFFF;
+            --muted: #242935;
+            --line: rgba(79, 124, 255, 0.15);
+            --shadow-sm: 0 2px 10px rgba(79, 124, 255, 0.08);
+            --shadow-md: 0 12px 32px rgba(79, 124, 255, 0.12);
+            --shadow-lg: 0 24px 60px rgba(79, 124, 255, 0.18);
+            --radius: 18px;
+            --serif: 'Poppins', sans-serif;
+            --sans: 'Poppins', sans-serif;
+            --mono: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 96px;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--white);
+            color: var(--ink);
+            line-height: 1.75;
+            font-size: 16.5px;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .wrap {
+            max-width: 92%;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .eyebrow {
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--rust);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 26px;
+            height: 1px;
+            background: var(--rust);
+            display: inline-block;
+        }
+
+        h1,
+        h2 {
+            font-family: var(--serif);
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -0.015em;
+        }
+
+        h3,
+        h4 {
+            font-family: var(--serif);
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: -0.01em;
+        }
+
+        .section-head {
+            max-width: 1280px;
+            margin-bottom: 56px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(28px, 3.6vw, 42px);
+            line-height: 1.22;
+        }
+
+        .section-head h2 span {
+            color: #eb3f56;
+            text-decoration: underline;
+            text-decoration-thickness: 1.2px;
+            text-underline-offset: 3px;
+        }
+
+        .section-head p {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.7;
+            margin-top: 14px;
+            max-width: 1280px;
+        }
+
+        .section-head.center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        section {
+            position: relative;
+            padding: 50px 0;
+        }
+
+        /* ===================== ANIMATIONS ===================== */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 70, 126, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(239, 70, 126, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 70, 126, 0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-10deg) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scroll.delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .animate-on-scroll.delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .animate-on-scroll.delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .animate-on-scroll.delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* Pulse button */
+        .btn-pulse {
+            animation: pulseGlow 2s infinite;
+        }
+
+        .btn-pulse:hover {
+            animation: none;
+        }
+
+        /* Shimmer effect for CTA */
+        .shimmer-text {
+            background: linear-gradient(90deg,
+                    var(--rust) 0%,
+                    var(--gold) 25%,
+                    var(--rust) 50%,
+                    var(--gold) 75%,
+                    var(--rust) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+            display: inline-block;
+        }
+
+        /* Floating icons */
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .float-animation-delay-1 {
+            animation-delay: 0.5s;
+        }
+
+        .float-animation-delay-2 {
+            animation-delay: 1s;
+        }
+
+        .float-animation-delay-3 {
+            animation-delay: 1.5s;
+        }
+
+        /* Hover micro-interactions */
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .hover-glow {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(79, 124, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* ===================== NAV ===================== */
+        header.site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(251, 246, 236, 0.82);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid transparent;
+            transition: border-color .3s ease, box-shadow .3s ease;
+        }
+
+        header.site-nav.scrolled {
+            border-bottom-color: var(--line);
+            box-shadow: 0 4px 24px rgba(22, 36, 27, 0.05);
+        }
+
+        .nav-inner {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 18px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 21px;
+            color: var(--ink);
+        }
+
+        .brand img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: var(--rust);
+            transition: width .3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--ink);
+            color: var(--cream) !important;
+            padding: 11px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background: var(--green);
+        }
+
+        .nav-cta svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            width: 26px;
+        }
+
+        .nav-toggle span {
+            height: 2px;
+            background: var(--ink);
+            border-radius: 2px;
+            transition: all .3s ease;
+        }
+
+        /* ===================== HERO ===================== */
+        .hero {
+            padding: 128px 0 100px;
+            position: relative;
+            background:
+                linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+                url("media/ChatGPT Image Jul 4, 2026, 11_07_13 AM.png") center center / cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 56px;
+            align-items: start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-copy h1 {
+            font-size: clamp(32px, 4.6vw, 50px);
+            line-height: 1.2;
+            margin-bottom: 22px;
+            margin-top: 20px;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero-copy h1 span {
+            color: var(--gold);
+        }
+
+        .hero-copy .lede {
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--muted);
+            max-width: 700px;
+            margin-bottom: 34px;
+            animation: fadeUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 44px;
+            animation: fadeUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 28px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: transform .28s cubic-bezier(.2, .8, .2, 1), box-shadow .28s ease;
+        }
+
+        .btn svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .btn-primary {
+            background: var(--rust);
+            color: var(--white);
+            box-shadow: 0 10px 26px rgba(168, 69, 47, 0.28);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 34px rgba(168, 69, 47, 0.36);
+        }
+
+        .btn-ghost {
+            background: var(--white);
+            color: var(--ink);
+            border: 1px solid var(--line);
+        }
+
+        .btn-ghost:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero .btn-primary {
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        .hero .btn-primary:hover {
+            animation: none;
+        }
+
+        /* lead form card */
+        .lead-card {
+            background: var(--white);
+            border-radius: 22px;
+            padding: 34px 30px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            animation: fadeUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .lead-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 70px rgba(79, 124, 255, 0.2);
+        }
+
+        .lead-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            line-height: 1.4rem;
+            text-align: center;
+        }
+
+        .field {
+            margin-bottom: 14px;
+        }
+
+        .field label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--ink-soft);
+            margin-bottom: 6px;
+            letter-spacing: .02em;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            padding: 9px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: var(--cream-2);
+            font-family: var(--sans);
+            font-size: 14.5px;
+            color: var(--ink);
+            transition: border-color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            outline: none;
+            border-color: var(--green);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.1);
+            transform: scale(1.01);
+        }
+
+        .field textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            background: var(--ink);
+            color: var(--cream);
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 6px;
+            transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+        }
+
+        .form-submit:hover {
+            background: var(--rust);
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 8px 25px rgba(239, 70, 126, 0.3);
+        }
+
+        /* ===================== MARQUEE ===================== */
+        .marquee-section {
+            background: var(--ink);
+            padding: 16px 0;
+            overflow: hidden;
+            border-top: 1px solid rgba(251, 246, 236, 0.08);
+            border-bottom: 1px solid rgba(251, 246, 236, 0.08);
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marqueeScroll 32s linear infinite;
+        }
+
+        .marquee-track .m-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 34px;
+            font-family: var(--mono);
+            font-size: 12.5px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(251, 246, 236, 0.62);
+            white-space: nowrap;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .marquee-track .m-item:hover {
+            color: var(--gold-light);
+        }
+
+        .marquee-track .m-item svg {
+            width: 6px;
+            height: 6px;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        @keyframes marqueeScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ===================== WHY US ===================== */
+        .why-us {
+            background: var(--white);
+        }
+
+        .why-card {
+            background: radial-gradient(circle at bottom left, rgba(255, 92, 168, 0.263), transparent 45%),
+                radial-gradient(circle at bottom right, rgba(79, 123, 255, 0.263), transparent 45%),
+                #ffffff;
+            border-radius: 18px;
+            padding: 32px 16px;
+            transition: transform .35s cubic-bezier(.2, .8, .2, 1),
+                box-shadow .35s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            cursor: default;
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: transform .35s ease;
+        }
+
+        .why-card:hover .why-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .why-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            font-size: 15.5px;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+
+        /* ===================== INTRO / AACCC ===================== */
+        .badge-circle {
+            width: 118px;
+            height: 118px;
+            border-radius: 50%;
+            background: var(--sage);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 2px solid var(--gold);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .badge-circle:hover {
+            transform: scale(1.05) rotate(-5deg);
+            box-shadow: 0 0 30px rgba(255, 95, 162, 0.2);
+        }
+
+        .badge-circle img {
+            max-width: 70px;
+        }
+
+        .round-chips {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 18px 0;
+        }
+
+        .round-chip {
+            font-family: var(--mono);
+            font-size: 13px;
+            font-weight: 500;
+            background: var(--green);
+            color: var(--cream);
+            padding: 8px 16px;
+            border-radius: 100px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+        }
+
+        .round-chip:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(79, 124, 255, 0.3);
+        }
+
+        .round-chip.svr {
+            background: var(--rust);
+        }
+
+        .round-chip.svr:hover {
+            box-shadow: 0 6px 20px rgba(239, 70, 126, 0.3);
+        }
+
+        .callout {
+            background: var(--cream-2);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: var(--ink-soft);
+            margin-top: 8px;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .callout:hover {
+            border-left-color: var(--rust);
+            background: var(--cream);
+        }
+
+
+        /* ===================== STAGES ===================== */
+        .stages-section {
+            background: var(--sage);
+        }
+
+        .stage-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stage-item {
+            display: flex;
+            gap: 22px;
+            align-items: flex-start;
+        }
+
+        .stage-card {
+            flex: 1;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 12px 26px;
+            border: 1px solid var(--line);
+            cursor: pointer;
+            transition: box-shadow .3s ease, transform .3s ease, border-color .3s ease;
+        }
+
+        /* .stage-item:nth-child(even) .stage-card {
+            background: linear-gradient(135deg, #ffdfee 0%, #fff2f9 50%, #fff2fb 100%);
+        } */
+
+        .stage-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+            border-color: var(--green-light);
+        }
+
+        .stage-node {
+            flex-shrink: 0;
+            margin-top: 2px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--green);
+            color: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: 0 0 0 6px var(--sage), 0 0 0 7px var(--line);
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stage-card:hover .stage-node {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 6px var(--sage), 0 0 0 7px var(--green-light);
+        }
+
+        .stage-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .stage-top h4 {
+            font-size: 22px;
+            line-height: 1.3;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .stage-card:hover .stage-top h4 {
+            color: var(--green);
+        }
+
+        .stage-chevron {
+            width: 20px;
+            height: 20px;
+            color: var(--muted);
+            flex-shrink: 0;
+            transition: transform .3s ease, color .3s ease;
+        }
+
+        .stage-card.open .stage-chevron {
+            transform: rotate(180deg);
+            color: var(--rust);
+        }
+
+        .stage-summary {
+            font-size: 16px;
+            line-height: 1.3;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .stage-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease;
+        }
+
+        .stage-card.open .stage-body {
+            max-height: 600px;
+        }
+
+        .stage-body-inner {
+            padding-top: 14px;
+            font-size: 17px;
+            line-height: 1.75;
+            color: var(--ink);
+            border-top: 1px dashed var(--line);
+            margin-top: 14px;
+            animation: fadeUp 0.4s ease;
+        }
+
+        .stage-body-inner ul {
+            margin: 10px 0;
+            padding-left: 2px;
+        }
+
+        .stage-body-inner ul li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .stage-body-inner ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+
+        .stage-body-inner table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        .stage-body-inner table td {
+            padding: 8px;
+        }
+
+        .stage-body-inner table tr:first-child {
+            background: var(--cream-2);
+            font-weight: 600;
+        }
+
+        /* ===================== DATES TABLE ===================== */
+        .dates-section {
+            background: var(--cream);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            border-radius: 18px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--line);
+            -webkit-overflow-scrolling: touch;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .table-scroll:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+
+        table.dates-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+            background: var(--white);
+        }
+
+        table.dates-table thead th {
+            background: var(--ink);
+            color: var(--cream);
+            font-family: var(--mono);
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            padding: 16px 18px;
+            text-align: left;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        table.dates-table tbody td {
+            padding: 15px 18px;
+            font-size: 16px;
+            border-top: 1px solid var(--line);
+            color: var(--ink-soft);
+            white-space: nowrap;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        table.dates-table tbody td:first-child {
+            font-weight: 600;
+            color: var(--ink);
+            background: var(--cream-2);
+            font-family: var(--mono);
+            font-size: 18px;
+        }
+
+        table.dates-table tbody tr {
+            transition: transform 0.2s ease;
+        }
+
+        table.dates-table tbody tr:hover {
+            transform: scale(1.01);
+        }
+
+        table.dates-table tbody tr:hover td {
+            background: rgba(201, 154, 62, 0.08);
+            color: var(--ink);
+        }
+
+        table.dates-table tbody tr:hover td:first-child {
+            background: rgba(201, 154, 62, 0.18);
+        }
+
+        /* ===================== KEA SECTION ===================== */
+        .kea-section {
+            background: var(--cream);
+            color: var(--muted);
+        }
+
+        .kea-section .section-head h2,
+        .kea-section .section-head p {
+            color: var(--ink);
+        }
+
+        .kea-intro-panel {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-sm);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 32px;
+            align-items: start;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .kea-intro-panel:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .kea-intro-panel h3 {
+            color: var(--ink);
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .kea-intro-panel ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            line-height: 1.7;
+            transition: transform 0.2s ease;
+        }
+
+        .kea-intro-panel ul li:hover {
+            transform: translateX(6px);
+        }
+
+        .kea-intro-panel ul li svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            margin-top: 4px;
+            color: var(--rust);
+            transition: transform 0.3s ease;
+        }
+
+        .kea-intro-panel ul li:hover svg {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .kea-intro-panel .callout {
+            background: var(--sage);
+            border-left-color: var(--rust);
+            color: var(--ink);
+        }
+
+        .badge-circle.white {
+            background: var(--sage);
+            border-color: var(--rust-light);
+        }
+
+        .kea-stages .stage-node {
+            background: var(--gold);
+            color: var(--white);
+            box-shadow: 0 0 0 6px var(--cream), 0 0 0 7px var(--line);
+        }
+
+        .kea-stages .stage-card:hover .stage-node {
+            box-shadow: 0 0 0 6px var(--cream), 0 0 0 7px var(--gold-light);
+        }
+
+        .kea-stages .stage-card {
+            background: var(--white);
+            border-color: var(--line);
+        }
+
+        .kea-stages .stage-summary {
+            color: rgb(36, 41, 53);
+        }
+
+        .kea-stages .stage-body-inner {
+            color: var(--ink);
+            border-top-color: var(--line);
+        }
+
+        /* Phase tabs */
+        .phase-tabs {
+            margin-top: 20px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 11px 22px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            background: var(--white);
+            color: rgba(36, 41, 53, 0.7);
+            border: 1px solid var(--line);
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--gold-light);
+            color: var(--ink);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tab-btn.active {
+            background: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
+            box-shadow: 0 6px 16px rgba(255, 95, 162, 0.3);
+        }
+
+        .tab-btn.active:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 95, 162, 0.4);
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeUp 0.4s ease;
+        }
+
+        .phase-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 28px 30px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .phase-card h4 {
+            color: var(--rust);
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+
+        .phase-card p,
+        .phase-card li {
+            color: rgba(36, 41, 53, 0.82);
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .phase-card ul {
+            margin: 12px 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .phase-card ul li {
+            position: relative;
+            padding-left: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .phase-card ul li:hover {
+            transform: translateX(4px);
+        }
+
+        .phase-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--rust);
+        }
+
+        .special-order {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 14px 0;
+        }
+
+        .special-order span {
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 700;
+            background: var(--sage);
+            color: var(--rust);
+            padding: 6px 14px;
+            border-radius: 100px;
+            border: 1px solid var(--rust-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+        }
+
+        .special-order span:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(239, 70, 126, 0.2);
+        }
+
+        /* ===================== DOCUMENTS ===================== */
+        .docs-section {
+            background: var(--white);
+        }
+
+        .doc-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 10px 14px;
+            border: 1px solid var(--line);
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+            cursor: default;
+        }
+
+        .doc-item:hover {
+            background: var(--sage);
+            transform: translateX(6px) scale(1.02);
+            box-shadow: var(--shadow-sm);
+            border-color: var(--green-light);
+        }
+
+        .doc-item svg {
+            width: 19px;
+            height: 19px;
+            color: var(--green);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .doc-item:hover svg {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* ===================== RANK PREDICTOR ===================== */
+        .predictor-section {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--cream) 100%);
+        }
+
+        .predictor-panel {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 44px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--line);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .predictor-panel:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 70px rgba(79, 124, 255, 0.15);
+        }
+
+        .predictor-copy h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .predictor-copy p {
+            color: var(--muted);
+            font-size: 15.5px;
+            line-height: 1.65;
+            margin-bottom: 12px;
+        }
+
+        .predictor-form {
+            background: var(--cream-2);
+            border-radius: 18px;
+            padding: 28px;
+            transition: background 0.3s ease;
+        }
+
+        .predictor-form:hover {
+            background: var(--cream);
+        }
+
+        .pred-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .pred-result {
+            margin-top: 18px;
+            padding: 18px 20px;
+            border-radius: 12px;
+            background: var(--green);
+            color: var(--cream);
+            display: none;
+            animation: fadeUp 0.5s ease;
+        }
+
+        .pred-result.show {
+            display: block;
+        }
+
+        .pred-result .score {
+            font-family: var(--mono);
+            font-size: 28px;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        .pred-result .tier {
+            font-size: 13px;
+            margin-top: 6px;
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        .pred-result .note {
+            font-size: 12px;
+            margin-top: 8px;
+            color: rgba(251, 246, 236, 0.7);
+        }
+
+        #predictBtn {
+            transition: all 0.3s ease;
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        #predictBtn:hover {
+            animation: none;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(239, 70, 126, 0.4);
+        }
+
+        /* ===================== COLLEGES CAROUSEL ===================== */
+        .cc-section {
+            padding: 64px 16px 72px;
+            background: var(--cream);
+        }
+
+        .cc-container {
+            max-width: 92%;
+            margin: 0 auto;
+        }
+
+        .cc-heading {
+            text-align: center;
+            font-weight: 800;
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            color: var(--ink-soft);
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .cc-subheading {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.98rem;
+            margin-bottom: 40px;
+        }
+
+        .cc-carousel {
+            overflow: hidden;
+            position: relative;
+            -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+        }
+
+        .cc-track {
+            display: flex;
+            gap: 24px;
+            will-change: transform;
+            transition: transform 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+
+        .cc-track.cc-no-transition {
+            transition: none !important;
+        }
+
+        .cc-card {
+            flex: 0 0 calc(25% - 18px);
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 24px 28px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .cc-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cc-logo {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cc-card:hover .cc-logo {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 0 30px rgba(79, 124, 255, 0.2);
+        }
+
+        .cc-logo svg {
+            width: 38px;
+            height: 38px;
+            fill: #fff;
+        }
+
+        .cc-name {
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: var(--ink-soft);
+            line-height: 1.4;
+            margin-bottom: 16px;
+            min-height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cc-location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--ink);
+            font-weight: 500;
+            font-size: 0.96rem;
+            margin-bottom: 22px;
+        }
+
+        .cc-location svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            fill: var(--rust);
+        }
+
+        .cc-btn {
+            background: var(--ink);
+            color: #fff;
+            border: none;
+            padding: 11px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+            display: inline-block;
+        }
+
+        .cc-btn:hover {
+            background: var(--ink-soft);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 6px 20px rgba(27, 37, 89, 0.3);
+        }
+
+        .cc-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin-top: 40px;
+        }
+
+        .cc-arrow {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(27, 42, 107, 0.18);
+            background: #fff;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .cc-arrow:hover {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(27, 37, 89, 0.2);
+        }
+
+        .cc-arrow:active {
+            transform: scale(0.92);
+        }
+
+        .cc-arrow svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ===================== FINAL CTA ===================== */
+        .final-cta {
+            background: linear-gradient(120deg, rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.266)),
+                url('https://learntechww.com/images/bams/contactbanner.webp');
+            background-blend-mode: overlay;
+            background-size: cover;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 50%);
+        }
+
+        .final-cta h2 {
+            background-color: #00000066;
+            border-radius: 40px;
+            color: var(--white);
+            font-size: clamp(26px, 4vw, 60px);
+            position: relative;
+            z-index: 1;
+            margin-bottom: 12px;
+            line-height: 4rem;
+            padding: 0 20px;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .final-cta p {
+            background-color: #00000067;
+            border-radius: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 32px;
+            padding: 8px 20px;
+            display: inline-block;
+            animation: fadeUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .final-cta .btn-primary {
+            background: var(--ink);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        .final-cta .btn-primary:hover {
+            animation: none;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .final-cta .btn-ghost {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(6px);
+        }
+
+        .final-cta .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .final-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+            animation: fadeUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        /* ===================== FOOTER ===================== */
+        footer {
+            background: var(--ink);
+            color: rgba(251, 246, 236, 0.7);
+            padding: 56px 0 28px;
+        }
+
+        .footer-brand {
+            font-family: var(--serif);
+            font-size: 22px;
+            color: var(--cream);
+            font-weight: 700;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-brand:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-col h5 {
+            color: var(--cream);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .footer-col a {
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+            color: rgba(251, 246, 236, 0.65);
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold-light);
+            transform: translateX(4px);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .footer-socials a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(251, 246, 236, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .25s ease, transform .25s ease;
+        }
+
+        .footer-socials a:hover {
+            background: var(--gold);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .footer-socials svg {
+            width: 16px;
+            height: 16px;
+            color: var(--cream);
+            transition: transform 0.3s ease;
+        }
+
+        .footer-socials a:hover svg {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(251, 246, 236, 0.1);
+            padding-top: 22px;
+            font-size: 12.5px;
+            text-align: center;
+            color: rgba(251, 246, 236, 0.4);
+        }
+
+        /* whatsapp float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            z-index: 900;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            transition: transform .3s ease, box-shadow .3s ease;
+            animation: pulseGlow 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.12) rotate(-5deg);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            color: white;
+        }
+
+        /* ===================== RESPONSIVE ===================== */
+        @media(max-width:980px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .kea-intro-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .badge-circle {
+                margin-bottom: 6px;
+            }
+
+            .predictor-panel {
+                padding: 24px;
+            }
+
+            .cc-card {
+                flex-basis: calc(33.333% - 16px);
+            }
+        }
+
+        @media(max-width:760px) {
+            .wrap {
+                padding: 0 16px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--cream);
+                flex-direction: column;
+                padding: 24px 28px;
+                gap: 20px;
+                border-bottom: 1px solid var(--line);
+                box-shadow: var(--shadow-md);
+                transform: translateY(-130%);
+                transition: transform .35s ease;
+                align-items: flex-start;
+            }
+
+            .nav-links.open {
+                transform: translateY(0);
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-cta span {
+                display: none;
+            }
+
+            section {
+                padding: 64px 0;
+            }
+
+            .hero {
+                padding: 130px 0 60px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pred-row {
+                grid-template-columns: 1fr;
+            }
+
+            .cc-card {
+                flex-basis: 100%;
+            }
+
+            .tab-buttons {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .stage-item {
+                gap: 10px;
+            }
+
+            .stage-node {
+                width: 18px;
+                height: 18px;
+                font-size: 13px;
+            }
+
+            .stage-card {
+                padding: 18px 20px;
+            }
+
+            .stage-top h4 {
+                font-size: 18px;
+            }
+        }
+
+        @media(max-width:991px) {
+            .cc-card {
+                flex-basis: calc(50% - 12px);
+            }
+
+            .cc-name {
+                min-height: auto;
+            }
+        }
+
+        @media(max-width:575px) {
+            .cc-carousel {
+                -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+                mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+            }
+
+            .kea-intro-panel {
+                padding: 20px;
+            }
+        }
+
+        @media(prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .animate-on-scroll {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .lead-card,
+            .hero-copy h1,
+            .hero-copy .lede,
+            .hero-actions,
+            .final-actions,
+            .final-cta h2,
+            .final-cta p {
+                animation: none !important;
+                opacity: 1 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ NAV ============ -->
+    <header class="site-nav" id="siteNav">
+        <div class="nav-inner">
+            <a href="#home" class="brand">
+                <img src="https://learntechww.com/_next/image?url=%2Fimages%2Fbams%2Flogo.webp&w=256&q=75"
+                    alt="LearnTech">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#why-us">Why Us?</a>
+                <a href="#counselling">BAMS Counselling</a>
+                <a href="#rank-predictor">NEET Rank Predictor</a>
+                <a href="#colleges">Top Colleges</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+            <div style="display:flex;align-items:center;gap:14px;">
+                <a href="tel:08022454991" class="nav-cta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.32 1.6.59 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.16a2 2 0 0 1 2.11-.45c.76.27 1.55.47 2.36.59A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    <span>Connect With Our Experts</span>
+                </a>
+                <button class="nav-toggle" id="navToggle"
+                    aria-label="menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+        <div class="wrap hero-grid">
+            <div class="hero-copy">
+                <p class="hero-overline">
+                    Your Path to Ayurvedic Medicine Starts Here!
+                </p>
+                <style>
+                    .hero-overline {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px 18px;
+                        border: 1px solid rgba(54, 64, 139, .15);
+                        border-radius: 999px;
+                        background: rgba(54, 64, 139, .06);
+                        color: #36408B;
+                        font-size: clamp(.9rem, 2vw, 1rem);
+                        font-weight: 600;
+                        letter-spacing: .5px;
+                        backdrop-filter: blur(10px);
+                        margin-bottom: 20px;
+                        margin-top: 50px;
+                    }
+
+                    .hero-overline::before {
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: #ff5c93;
+                        box-shadow: 0 0 12px #ff5c93;
+                    }
+                </style>
+                <h1>Navigate NEET UG 2026 BAMS <span>Counselling</span> with <span>Confidence</span></h1>
+                <p class="lede">Receive expert guidance at every stage of the NEET UG 2026 BAMS counselling process.
+                    Explore top Ayurvedic colleges in Karnataka and across India through All India and KEA counselling
+                    with personalized admission support.</p>
+                <div class="hero-actions">
+                    <a href="tel:08022454991" class="btn btn-primary btn-pulse">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.32 1.6.59 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.16a2 2 0 0 1 2.11-.45c.76.27 1.55.47 2.36.59A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        Talk to an Expert Now
+                    </a>
+                </div>
+            </div>
+            <form class="lead-card" id="leadForm">
+                <h3>Fill Out the Form to Get Assistance in Securing Your BAMS Seat for A.Y. 2026-27</h3>
+                <div class="field"><input type="text" placeholder="Full Name:" required></div>
+                <div class="field"><input type="email" placeholder="Email Address:" required></div>
+                <div class="field"><input type="tel" placeholder="Phone No:" required></div>
+                <div class="field"><input type="number" placeholder="NEET Score:"></div>
+                <div class="field">
+                    <select>
+                        <option value="">State</option>
+                        <option>Karnataka</option>
+                        <option>Maharashtra</option>
+                        <option>Tamil Nadu</option>
+                        <option>Kerala</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="field"><textarea placeholder="Your Message (Optional):"></textarea></div>
+                <button type="submit" class="form-submit">Submit Enquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee-section">
+        <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- ============ WHY US ============ -->
+    <section class="why-us" id="why-us">
+        <div class="wrap">
+            <div class="section-head center">
+                <h2>Your <span>BAMS Admission </span> Journey Starts Here
+                </h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6 animate-on-scroll">
+                    <div class="why-card">
+                        <div class="why-icon"><img src="icons/Icon_01.svg" alt="icon" style="width:40px;"></div>
+                        <h3> Personalised Counselling</h3>
+                        <p>Receive one-on-one guidance tailored to your NEET rank, preferred colleges, budget, and
+                            career goals. Our experts help you make informed decisions at every stage of the counselling
+                            process.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 animate-on-scroll delay-1">
+                    <div class="why-card">
+                        <div class="why-icon"><img src="icons/Icon_02.svg" alt="icon" style="width:40px;"></div>
+                        <h3> Experienced Admission Experts</h3>
+                        <p>Navigate BAMS admissions with confidence under the guidance of seasoned counsellors who have
+                            extensive experience with All India and Karnataka (KEA) counselling.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 animate-on-scroll delay-2">
+                    <div class="why-card">
+                        <div class="why-icon"><img src="icons/Icon_03.svg" alt="icon" style="width:40px;"></div>
+                        <h3>End-to-End Admission Support</h3>
+                        <p>Our assistance doesn't end with seat allotment. We help with document verification, reporting
+                            to the allotted college, and other admission formalities for a hassle-free transition.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 animate-on-scroll delay-3">
+                    <div class="why-card">
+                        <div class="why-icon"><img src="icons/Icon_04.svg" alt="icon" style="width:40px;"></div>
+                        <h3> Save Time, Avoid Mistakes</h3>
+                        <p>Counselling can be complex and time-sensitive. Our experts streamline the process, helping
+                            you complete every step accurately and efficiently while avoiding common errors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ALL INDIA (AACCC) COUNSELLING ============ -->
+    <section class="aaccc-section" id="counselling">
+        <div class="wrap aaccc-wrap">
+            <h2 class="aaccc-title animate-on-scroll">All India BAMS Counselling 2026</h2>
+            <p class="aaccc-lead animate-on-scroll">
+                The All India BAMS counselling process is conducted by the <strong>Ayush Admissions Central Counselling
+                    Committee (AACCC)</strong>, Ministry of AYUSH. Candidates must qualify <strong>NEET UG 2026</strong>
+                to participate in AACCC counselling.
+            </p>
+
+            <div class="aaccc-summary-row animate-on-scroll">
+                <div class="aaccc-summary-card">
+                    <span class="aaccc-summary-label">Conducted by</span>
+                    <span class="aaccc-summary-value">AACCC, Ministry of AYUSH</span>
+                </div>
+                <div class="aaccc-summary-card">
+                    <span class="aaccc-summary-label">Eligibility</span>
+                    <span class="aaccc-summary-value">NEET UG 2026 qualified</span>
+                </div>
+            </div>
+
+            <p class="aaccc-subhead animate-on-scroll">AACCC conducts counselling for</p>
+            <div class="aaccc-scope-grid animate-on-scroll">
+                <div class="aaccc-scope-card">
+                    <div class="aaccc-scope-icon aaccc-scope-icon--green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+                        </svg>
+                    </div>
+                    <div class="aaccc-scope-label">All India Quota (AIQ) seats in Government and Government-aided AYUSH
+                        colleges</div>
+                </div>
+                <div class="aaccc-scope-card">
+                    <div class="aaccc-scope-icon aaccc-scope-icon--gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" />
+                            <path d="M7 10.5V16c0 1.5 2.5 3 5 3s5-1.5 5-3v-5.5" />
+                        </svg>
+                    </div>
+                    <div class="aaccc-scope-label">Central Universities</div>
+                </div>
+                <div class="aaccc-scope-card">
+                    <div class="aaccc-scope-icon aaccc-scope-icon--rust">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="10" width="16" height="10" rx="1" />
+                            <path d="M9 20v-5h6v5M4 10l8-6 8 6" />
+                        </svg>
+                    </div>
+                    <div class="aaccc-scope-label">National Institutes</div>
+                </div>
+                <div class="aaccc-scope-card">
+                    <div class="aaccc-scope-icon aaccc-scope-icon--forest">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M4 21c0-4 3.5-6 8-6s8 2 8 6" />
+                        </svg>
+                    </div>
+                    <div class="aaccc-scope-label">Deemed Universities</div>
+                </div>
+            </div>
+
+            <div class="aaccc-callout animate-on-scroll">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v5M12 16h.01" />
+                </svg>
+                <span>Private colleges (except deemed universities) are generally counselled by the respective State/UT
+                    authorities — see the Karnataka (KEA) process further down this page.</span>
+            </div>
+
+            <p class="aaccc-subhead animate-on-scroll">Counselling process</p>
+            <div class="aaccc-timeline-wrap animate-on-scroll">
+                <ul class="aaccc-timeline">
+                    <li class="aaccc-round">
+                        <div class="aaccc-round-index">1</div>
+                        <div class="aaccc-round-name">Round 1</div>
+                    </li>
+                    <li class="aaccc-round">
+                        <div class="aaccc-round-index">2</div>
+                        <div class="aaccc-round-name">Round 2</div>
+                    </li>
+                    <li class="aaccc-round">
+                        <div class="aaccc-round-index">3</div>
+                        <div class="aaccc-round-name">Round 3</div>
+                    </li>
+                    <li class="aaccc-round aaccc-round--svr" role="button" tabindex="0" aria-expanded="false">
+                        <div class="aaccc-round-index aaccc-round-index--active">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <div class="aaccc-round-name">Stray Vacancy Round</div>
+                    </li>
+                </ul>
+
+                <div class="aaccc-accordion">
+                    <div class="aaccc-accordion-inner">
+                        <div class="aaccc-accordion-content">
+                            <div class="aaccc-svr-card">
+                                <h4>The Stray Vacancy Round is conducted to fill seats that remain vacant after Round 3.
+                                    For Government, Government-aided colleges, Central Universities, and National
+                                    Institutes, the online Stray Vacancy Round is held in two allotment phases - SVR-I
+                                    and SVR-II. Admissions to Deemed Universities are conducted separately through the
+                                    Stray Vacancy Round for Deemed Universities (SVR-DU). Seats in Deemed Universities
+                                    are unreserved, and the Central Government reservation policy does not apply to
+                                    them.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .aaccc-section {
+            background: var(--white);
+            color: var(--ink);
+        }
+
+        .aaccc-wrap {
+            position: relative;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 28px;
+            background: linear-gradient(180deg, rgba(0, 0, 255, 0), rgba(24, 134, 182, 0.079));
+            border-radius: 28px;
+            overflow: hidden;
+
+            border: 1px solid rgba(54, 64, 139, 0.08);
+
+            box-shadow:
+                0 4px 8px rgba(15, 23, 42, 0.03),
+                0 12px 24px rgba(15, 23, 42, 0.05),
+                0 32px 64px rgba(15, 23, 42, 0.08);
+        }
+
+        .aaccc-wrap::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                    rgba(54, 64, 139, 0.04),
+                    transparent 35%,
+                    rgba(255, 95, 162, 0.04));
+            pointer-events: none;
+        }
+
+        .aaccc-title {
+            font-size: clamp(26px, 3.2vw, 40px);
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-thickness: 1.5px;
+            text-underline-offset: 5px;
+            line-height: 1.2;
+            margin: 0 0 12px;
+            color: rgb(171, 0, 45);
+        }
+
+        .aaccc-lead {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--muted);
+            max-width: 1200px;
+            margin: 0 0 28px;
+        }
+
+        .aaccc-lead strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        /* Summary row */
+        .aaccc-summary-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+
+        .aaccc-summary-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--cream-2);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 16px 20px;
+        }
+
+        .aaccc-summary-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .aaccc-summary-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .aaccc-subhead {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--ink);
+            margin: 0 0 16px;
+        }
+
+        /* Scope grid - compact 2x2 icon rows */
+        .aaccc-scope-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .aaccc-scope-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px 16px;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .aaccc-scope-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .aaccc-scope-icon {
+            flex-shrink: 0;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .aaccc-scope-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .aaccc-scope-icon--green {
+            background: rgba(79, 124, 255, 0.1);
+            color: var(--green);
+        }
+
+        .aaccc-scope-icon--gold {
+            background: rgba(255, 95, 162, 0.14);
+            color: var(--gold);
+        }
+
+        .aaccc-scope-icon--rust {
+            background: rgba(239, 70, 126, 0.1);
+            color: var(--rust);
+        }
+
+        .aaccc-scope-icon--forest {
+            background: rgba(54, 64, 139, 0.1);
+            color: var(--ink-soft);
+        }
+
+        .aaccc-scope-label {
+            font-size: 14.5px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--ink);
+        }
+
+        /* Callout - full soft background, no left border accent */
+        .aaccc-callout {
+            position: relative;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 18px 22px;
+            margin-bottom: 44px;
+            border-radius: 14px;
+            overflow: hidden;
+
+            background: #ffe8f3;
+            border-left: 4px solid var(--rust);
+        }
+
+        .aaccc-callout::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, .8),
+                    transparent);
+
+            animation: highlightMove 3.5s infinite;
+        }
+
+        @keyframes highlightMove {
+            100% {
+                left: 160%;
+            }
+        }
+
+        .aaccc-callout svg {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            color: var(--gold);
+            margin-top: 1px;
+        }
+
+        /* Timeline */
+        .aaccc-timeline {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .aaccc-round {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .aaccc-round-index {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 2px solid var(--line);
+            color: var(--ink);
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .aaccc-round-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--muted);
+        }
+
+        .aaccc-round--svr {
+            cursor: pointer;
+        }
+
+        .aaccc-round-index--active {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--white);
+        }
+
+        .aaccc-round--svr:hover .aaccc-round-index--active {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(255, 95, 162, 0.35);
+        }
+
+        .aaccc-round--svr:hover .aaccc-round-name {
+            color: var(--ink);
+        }
+
+        .aaccc-round-index--active svg {
+            width: 18px;
+            height: 18px;
+            transition: transform .3s ease;
+        }
+
+        .aaccc-round--svr[aria-expanded="true"] .aaccc-round-index--active svg {
+            transform: rotate(180deg);
+        }
+
+        /* Accordion */
+        .aaccc-accordion {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s ease;
+            margin-top: 20px;
+        }
+
+        .aaccc-accordion.is-open {
+            grid-template-rows: 1fr;
+        }
+
+        .aaccc-accordion-inner {
+            overflow: hidden;
+        }
+
+        .aaccc-accordion-content {
+            display: grid;
+            grid-template-columns: repeat(1fr);
+            gap: 14px;
+        }
+
+        .aaccc-svr-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 10px 12px;
+        }
+
+        .aaccc-svr-card h4 {
+            margin: 0 0 10px;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--muted);
+        }
+
+        .aaccc-badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .aaccc-badge {
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 999px;
+            background: rgba(79, 124, 255, 0.12);
+            color: var(--green);
+        }
+
+        .aaccc-svr-card ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 13.5px;
+            line-height: 1.75;
+            color: var(--muted);
+        }
+
+        .aaccc-svr-card ul li {
+            list-style: disc;
+        }
+
+        .aaccc-svr-note {
+            font-size: 12.5px;
+            color: var(--muted);
+            margin: 8px 0 0;
+            font-style: italic;
+        }
+
+        @media(max-width:760px) {
+            .aaccc-summary-row {
+                grid-template-columns: 1fr;
+            }
+
+            .aaccc-scope-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .aaccc-accordion-content {
+                grid-template-columns: 1fr;
+            }
+
+            .aaccc-round-name {
+                font-size: 11.5px;
+            }
+        }
+    </style>
+
+    <script>
+        (function () {
+            var triggers = document.querySelectorAll('.aaccc-round--svr');
+
+            triggers.forEach(function (trigger, i) {
+                var wrap = trigger.closest('.aaccc-timeline-wrap');
+                var panel = wrap ? wrap.querySelector('.aaccc-accordion') : null;
+                if (!panel) return;
+
+                var panelId = 'aacccSvrPanel-' + i;
+                panel.id = panelId;
+                trigger.setAttribute('aria-controls', panelId);
+
+                function toggle() {
+                    var isOpen = panel.classList.toggle('is-open');
+                    trigger.setAttribute('aria-expanded', isOpen);
+                }
+
+                trigger.addEventListener('click', toggle);
+                trigger.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggle();
+                    }
+                });
+            });
+        })();
+    </script>
+
+    <!-- ============ AIQ STAGES ============ -->
+    <section class="stages-section">
+        <div class="wrap">
+            <div class="section-head center animate-on-scroll">
+                <h2>All India NEET UG BAMS Counselling 2026 Stages</h2>
+                <p>The All India BAMS counselling process conducted by the Ayush Admissions Central Counselling
+                    Committee (AACCC) consists of multiple stages. While the counselling schedule varies for each round,
+                    the overall process generally remains the same. Before the commencement of every counselling round,
+                    AACCC publishes the seat matrix, schedule, and other important notifications on its official
+                    website.
+                </p>
+            </div>
+            <div class="stage-list" id="aiqStages">
+                <div class="stage-item animate-on-scroll">
+                    <div class="stage-node">1</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Stage 1: Registration</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">Candidates who wish to participate in the All India BAMS counselling
+                            process must register online through the official AACCC portal during the registration
+                            window of the respective counselling round.
+
+                        </p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Fresh registration is generally required for each eligible
+                                counselling phase except where AACCC specifically carries forward registrations, such as
+                                certain phases of the Stray Vacancy Round, subject to the counselling guidelines issued
+                                for that admission year.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-1">
+                    <div class="stage-node">2</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Stage 2: Payment of Counselling Fees</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">After completing registration, candidates must pay the prescribed
+                            counselling fee online.
+                        </p>
+
+
+                        <div class="stage-body">
+                            <div class="fee-box">
+                                <p>The counselling fee consists of:</p>
+
+                                <ul class="fee-list">
+                                    <li><i class="fas fa-check-circle"></i> Non-Refundable Registration Fee</li>
+                                    <li><i class="fas fa-check-circle"></i> Refundable Security Deposit</li>
+                                </ul>
+                            </div>
+
+                            <style>
+                                .fee-box {
+                                    background: #fff;
+                                    border: 1px solid #e8ebf3;
+                                    border-radius: 16px;
+                                    padding: 22px 24px;
+                                }
+
+                                .fee-box p {
+                                    margin: 0 0 16px;
+                                    font-size: 1rem;
+                                    font-weight: 600;
+                                    color: #1f2937;
+                                }
+
+                                .fee-list {
+                                    list-style: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 12px;
+                                }
+
+                                .fee-list li {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 12px;
+                                    font-size: 0.96rem;
+                                    color: #232323;
+                                    line-height: 1.5;
+                                }
+
+                                .fee-list li i {
+                                    width: 8px;
+                                    height: 8px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: rgba(54, 64, 139, 0.738);
+                                    color: #36408B;
+                                    border-radius: 50%;
+                                    font-size: 0.75rem;
+                                    flex-shrink: 0;
+                                }
+                            </style>
+                            <div class="stage-body-inner">
+                                <table>
+                                    <tr>
+                                        <td>Counselling Category</td>
+                                        <td>Category</td>
+                                        <td>Registration Fee</td>
+                                        <td>Refundable Security Deposit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AIQ Government Colleges, Government Aided Colleges, Central Universities &
+                                            National Institutes</td>
+                                        <td>UR EWS OBC NCL</td>
+                                        <td>Rs. 1,000</td>
+                                        <td>Rs. 20,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AIQ Government Colleges, Government Aided Colleges, Central Universities &
+                                            National Institutes</td>
+                                        <td>SC ST PwBD</td>
+                                        <td>Rs. 500</td>
+                                        <td>Rs. 20,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deemed Universities</td>
+                                        <td>All Categories</td>
+                                        <td>Rs. 5,000</td>
+                                        <td>Rs. 50,000</td>
+                                    </tr>
+                                </table>
+                                <p style="margin-top:10px;font-size:13px;"><strong>Note:</strong> Candidates opting for
+                                    both Government and Deemed University counselling must pay the higher applicable
+                                    fee.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-2">
+                    <div class="stage-node">3</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Choice-Filling</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">List your course and college preferences — this resets every round.</p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Candidates opt for the BAMS course and desired colleges in
+                                order of preference, editable while the window is open. Choices reset each round: Round
+                                1 choices don't carry into Round 2, and Rounds 1–3 choices become void in SVR-1. This
+                                stage doesn't apply to SVR-2 (choices carry forward from SVR-1) or SVR-DU. Eligible
+                                candidates approach deemed universities directly for the online SVR-DU round.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-3">
+                    <div class="stage-node">4</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Choice-Locking</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">Finalise your choices — once locked, they can't be changed for that
+                            round.</p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Candidates must finalise selected choices. Once locked,
+                                choices cannot be changed for the respective round. Choices are auto-locked for anyone
+                                who doesn't lock within the given time frame. Like Stage 3, this doesn't apply to SVR-2
+                                or SVR-DU.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-4">
+                    <div class="stage-node">5</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Seat Allotment Process</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">AACCC assigns course and college based on score, seats and category.
+                        </p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Allotment depends on: <ul>
+                                    <li>Candidate's NEET score</li>
+                                    <li>Availability of seats in preferred choices</li>
+                                    <li>Candidate category</li>
+                                </ul>Candidates not allotted a seat in the current round remain eligible for the next
+                                round.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-1">
+                    <div class="stage-node">6</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Result Announcement</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">Final results follow a mock allotment list to help set expectations.
+                        </p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">AACCC publishes the final result for the round. Before that, a
+                                mock seat allotment result list is released so students can estimate their chances of
+                                admission to their desired college.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-2">
+                    <div class="stage-node">7</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Reporting & Document Verification</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">Report to your college in person and complete admission formalities.
+                        </p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Candidates report to the designated college in person, submit
+                                required documents, and pay admission fees. The authoritative body verifies documents to
+                                confirm the seat. Seats of candidates who don't report within the stipulated time are
+                                considered vacant for the next round.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DATES TABLE ============ -->
+    <section class="dates-section">
+        <div class="wrap">
+            <div class="section-head animate-on-scroll">
+                <h2>AACCC BAMS 2024 Counselling Dates</h2>
+            </div>
+            <div class="table-scroll animate-on-scroll">
+                <table class="dates-table">
+                    <thead>
+                        <tr>
+                            <th>Process</th>
+                            <th>Round 1</th>
+                            <th>Round 2</th>
+                            <th>Round 3</th>
+                            <th>Stray Vacancy Round 1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Registration</td>
+                            <td>Aug 28 – Sept 3 (5:00 PM)</td>
+                            <td>Sept 18 – 23 (2:00 PM)</td>
+                            <td>Oct 9 – 14 (2:00 PM)</td>
+                            <td>Oct 28 – 31 (2:00 PM)</td>
+                        </tr>
+                        <tr>
+                            <td>Payment</td>
+                            <td>Aug 28 – Sept 3 (8:00 PM)</td>
+                            <td>Sept 18 – 23 (5:00 PM)</td>
+                            <td>Oct 9 – 14 (5:00 PM)</td>
+                            <td>Oct 28 – 31 (5:00 PM)</td>
+                        </tr>
+                        <tr>
+                            <td>Choice-Filling</td>
+                            <td>Aug 29 – Sept 3 (11:55 PM)</td>
+                            <td>Sept 19 – 23 (11:55 PM)</td>
+                            <td>Oct 10 – 14 (11:55 PM)</td>
+                            <td>Oct 29 – 31 (11:55 PM)</td>
+                        </tr>
+                        <tr>
+                            <td>Choice-Locking</td>
+                            <td>Sept 3 (6–11:55 PM)</td>
+                            <td>Sept 23 (2–11:55 PM)</td>
+                            <td>Oct 14 (2–11:55 PM)</td>
+                            <td>Oct 31 (2–11:55 PM)</td>
+                        </tr>
+                        <tr>
+                            <td>Seat Allotment Processing</td>
+                            <td>Sept 4</td>
+                            <td>Sept 24 – 25</td>
+                            <td>Oct 15 – 16</td>
+                            <td>Nov 1</td>
+                        </tr>
+                        <tr>
+                            <td>Result</td>
+                            <td>Sept 5</td>
+                            <td>Sept 26</td>
+                            <td>Oct 17</td>
+                            <td>Nov 2</td>
+                        </tr>
+                        <tr>
+                            <td>Reporting</td>
+                            <td>Sept 6 – 11</td>
+                            <td>Sept 27 – Oct 3</td>
+                            <td>Oct 18 – 22</td>
+                            <td>Nov 3 – 7</td>
+                        </tr>
+                        <tr>
+                            <td>Data Verification</td>
+                            <td>Sept 12 – 13</td>
+                            <td>Oct 4 – 5</td>
+                            <td>Oct 23 – 24</td>
+                            <td>Nov 8 – 9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ KEA SECTION ============ -->
+    <section class="kea-section">
+        <div class="wrap">
+            <div class="section-head animate-on-scroll">
+                <h2>Karnataka AYUSH Counselling 2025 Process</h2>
+            </div>
+            <div class="kea-intro-panel animate-on-scroll">
+                <div class="badge-circle white">
+                    <img src="https://learntechww.com/_next/image?url=%2Fimages%2Fbams%2FKEA.webp&w=256&q=75" alt="KEA">
+                </div>
+                <div>
+                    <h3>What You Need to Know</h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> KEA counselling begins once NEET-UG results are declared.</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> KEA conducts BAMS counselling for government, private, management and NRI quota seats
+                            across Karnataka.</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Students must complete registration on the official KEA website to be eligible.</li>
+                    </ul>
+                    <p style="font-weight:600;font-size:14.5px;margin-bottom:10px;color:var(--ink);">The KEA process
+                        runs across 4 rounds:</p>
+                    <div class="round-chips">
+                        <span class="round-chip" style="background:var(--gold);color:var(--ink);">01 · Round 1</span>
+                        <span class="round-chip" style="background:var(--gold);color:var(--ink);">02 · Round 2</span>
+                        <span class="round-chip" style="background:var(--gold-light);color:var(--ink);">03 · Mop-Up
+                            Round</span>
+                        <span class="round-chip svr">04 · Stray Vacancy Round</span>
+                    </div>
+                    <div class="callout">
+                        The Mop-Up Round runs only if seats remain unfilled after Rounds 1 & 2. Stray Vacancy Rounds may
+                        follow if seats still remain unfilled after the Mop-Up Round.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ KEA STAGES ============ -->
+    <section class="kea-section" style="padding-top:0;">
+        <div class="wrap">
+            <div class="section-head animate-on-scroll">
+                <h2>KEA NEET-UG BAMS Counselling 2025 Stages</h2>
+                <p>The KEA NEET-UG BAMS counselling takes place in various rounds. Each round has multiple stages, which
+                    are explained below.</p>
+            </div>
+            <div class="stage-list kea-stages">
+                <div class="stage-item animate-on-scroll">
+                    <div class="stage-node" style="background:var(--gold);color:var(--ink);">1</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Online Registration & Fee Payment</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">Register on the KEA website and pay the fee to complete this stage.</p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Interested and eligible candidates register through the
+                                Karnataka Ayush counselling website within the stipulated time. No documents or
+                                printouts need to be sent to prove eligibility. Candidates found ineligible at any stage
+                                have their candidature cancelled immediately. Registration is complete once the fee is
+                                paid online via card.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-1">
+                    <div class="stage-node" style="background:var(--gold);color:var(--ink);">2</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Document Verification</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">Get documents verified and download your verification slip.</p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Students must get documents verified within the stipulated
+                                time and download the verification slip once complete. No message or reminder is sent
+                                about the verification date/time — candidates must track this themselves. Missing the
+                                window means losing eligibility for the next stage, option entry.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-2">
+                    <div class="stage-node" style="background:var(--gold);color:var(--ink);">3</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Option Entry</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">Enter your college preferences in order — no limit on the number of
+                            options.</p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Candidates who clear document verification enter their most
+                                preferred college first, then continue in order of preference. There's no limit on the
+                                number of colleges added. The order matters: selected options remain for the current and
+                                subsequent rounds, though they can be reordered or deleted next round. New
+                                colleges/seats added to the matrix can be chosen in the upcoming round's option entry.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-3">
+                    <div class="stage-node" style="background:var(--gold);color:var(--ink);">4</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Mock Seat Allotment</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">A preview allotment to help you gauge your chances and reorder
+                            preferences.</p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">KEA publishes mock allotment results based on current
+                                preferences, helping candidates understand which seats they might be eligible for and
+                                reorder accordingly. Results can be viewed by entering your CET number on the KEA
+                                website. Final results may differ from the mock allotment.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-item animate-on-scroll delay-4">
+                    <div class="stage-node" style="background:var(--gold);color:var(--ink);">5</div>
+                    <div class="stage-card" data-stage>
+                        <div class="stage-top">
+                            <h4>Seat Allotment & Results</h4>
+                            <svg class="stage-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <p class="stage-summary">Seats are allotted by rank, preference and reservation rules — in 3
+                            phases.</p>
+                        <div class="stage-body">
+                            <div class="stage-body-inner">Seats are allotted based on rank/merit, preferences, and
+                                government reservation rules. Every round follows the same 3-phase structure — see the
+                                breakdown below.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE TABS -->
+            <div class="phase-tabs" style="margin-top:40px;">
+                <div class="tab-buttons animate-on-scroll">
+                    <button class="tab-btn active" data-tab="p1">Phase 1</button>
+                    <button class="tab-btn" data-tab="p2">Phase 2</button>
+                    <button class="tab-btn" data-tab="p3">Phase 3</button>
+                </div>
+                <div class="tab-panel active" id="p1">
+                    <div class="phase-card animate-on-scroll">
+                        <h4>All Candidates Eligible</h4>
+                        <p>Phase 1 begins with Special Category Seats allotted to Karnataka candidates in this order:
+                        </p>
+                        <div class="special-order"><span>People with Disabilities (PwD)</span><span>NCC
+                                Candidates</span><span>Sports Candidates</span></div>
+                        <p>After Special Category seats, all candidates — regardless of category — are first considered
+                            for General Merit (GM) seats. Those not allotted a GM seat are then considered for their
+                            respective category based on rank and preferences. This order repeats until allotments stop
+                            changing.</p>
+                    </div>
+                </div>
+                <div class="tab-panel" id="p2">
+                    <div class="phase-card animate-on-scroll">
+                        <h4>Reserved-Category Candidates Only</h4>
+                        <ul>
+                            <li>Applies only to candidates from reserved categories.</li>
+                            <li>Unfilled seats in the rural and Kannada-medium quota of reservation categories convert
+                                to general seats within the same reserved category — securable only by candidates of
+                                that category.</li>
+                            <li>Allotment again starts with Special Category seats, in the same PwD → NCC → Sports
+                                order, this time for Reserved-category candidates.</li>
+                            <li>After that, remaining reserved-category candidates are considered for remaining seats in
+                                their category.</li>
+                            <li>This order repeats until no candidate's allotment changes.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-panel" id="p3">
+                    <div class="phase-card animate-on-scroll">
+                        <h4>All Candidates Eligible Again</h4>
+                        <ul>
+                            <li>Reserved general-category seats and Special Category seats unfilled in Phase 2 convert
+                                to General Merit seats. If no general-category seats remain, rural/Kannada-medium quota
+                                seats convert to general seats of the respective reserved category instead.</li>
+                            <li>Converted general merit seats go to all GM candidates plus other reserved-category
+                                candidates. Converted category-general seats go only to candidates of that same
+                                category.</li>
+                            <li>Allotment again opens with Special Category seats — PwD → NCC → Sports.</li>
+                            <li>Remaining seats then go to all candidates by rank and preference, regardless of
+                                category.</li>
+                            <li>Any unfilled reserved seats convert automatically to GM and are re-offered — repeating
+                                until no reserved seats remain and allotments stop changing.</li>
+                        </ul>
+                        <p style="margin-top:12px;">Results for each round are published at the end of the round.
+                            Candidates allotted a seat in Phase 1 or 2 must wait until the full round completes before
+                            deciding on next steps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DOCUMENTS ============ -->
+    <section class="docs-section">
+        <div class="wrap">
+            <div class="section-head animate-on-scroll">
+                <h2>BAMS Counselling Documents Required for A.Y. 2025-26</h2>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>10th, 11th & 12th Marksheets</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Graduation Marksheets (if any)</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-2">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>NEET-UG Application Form</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-3">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>NEET-UG Admit Card</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-4">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>NEET-UG Scorecard</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>PwD Certificate (if applicable)</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Domicile Certificate (if applicable)</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-2">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>NEET-UG Rank Letter</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-3">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Valid Govt-issued ID Proof</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-4">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Recent Passport-size Photographs</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Transfer Certificate</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Medical Fitness Certificate</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-2">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Migration Certificate (if applicable)</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-3">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Caste Certificate (if applicable)</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-4">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Income Certificate (if applicable)</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Provisional Allotment Letter (AACCC)</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll delay-1">
+                    <div class="doc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>Character Certificate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ RANK PREDICTOR ============ -->
+    <section class="predictor-section" id="rank-predictor">
+        <div class="wrap">
+            <div class="predictor-panel row g-4 align-items-center animate-on-scroll">
+                <div class="col-md-6 predictor-copy">
+                    <p class="eyebrow">Know Where You Stand</p>
+                    <h3>BAMS NEET-UG 2025 Rank Predictor</h3>
+                    <p>Assess your performance across the 180-question NEET-UG paper and understand which colleges you
+                        may be eligible for.</p>
+                    <p>This gives you a head start on option entry — helping you strategise choices to improve your
+                        chances of securing your dream college.</p>
+                </div>
+                <div class="col-md-6 predictor-form">
+                    <div class="pred-row">
+                        <div class="field" style="margin-bottom:0;"><label>Out of 180 Questions</label><input
+                                type="number" value="180" disabled></div>
+                        <div class="field" style="margin-bottom:0;"><label>Questions Attempted</label><input
+                                type="number" id="attempted" placeholder="e.g. 165" min="0" max="180"></div>
+                    </div>
+                    <div class="field"><label>Correct Answers</label><input type="number" id="correct"
+                            placeholder="e.g. 140" min="0" max="180"></div>
+                    <button class="form-submit" id="predictBtn" style="background:var(--rust);">Predict My
+                        Score</button>
+                    <div class="pred-result" id="predResult">
+                        <div class="score" id="predScore">—</div>
+                        <div class="tier" id="predTier"></div>
+                        <div class="note">Estimate based on standard NEET marking (+4 / −1). Actual rank depends on the
+                            year's difficulty and cutoffs — talk to a counsellor for a precise read.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COLLEGES CAROUSEL ============ -->
+    <section class="cc-section" id="colleges">
+        <div class="cc-container">
+            <div class="section-head center animate-on-scroll">
+                <h2 class="cc-heading">Best BAMS Colleges in Karnataka</h2>
+                <p class="cc-subheading">A selection of top AYUSH counselling-participating colleges across the state
+                </p>
+            </div>
+            <div class="cc-carousel animate-on-scroll" id="ccCarousel">
+                <div class="cc-track" id="ccTrack"></div>
+            </div>
+            <div class="cc-controls">
+                <button class="cc-arrow" id="ccPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.4">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg></button>
+                <button class="cc-arrow" id="ccNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.4">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta">
+        <div class="wrap">
+            <h2>Secure Your BAMS Seat Today for <br> A.Y. 2025-26</h2>
+            <p>With personalised BAMS NEET counselling from LearnTech's expert team.</p>
+            <div class="final-actions">
+                <a href="tel:08022454991" class="btn btn-primary btn-pulse">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.32 1.6.59 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.16a2 2 0 0 1 2.11-.45c.76.27 1.55.47 2.36.59A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    Talk to an Expert Now
+                </a>
+                <a href="#home" class="btn btn-ghost">Back to Top</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer id="contact">
+        <div class="wrap">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="footer-brand">LearnTech</div>
+                    <p style="max-width:280px;">Guiding NEET-UG aspirants through BAMS admissions across India, with a
+                        focus on Karnataka's Ayurvedic colleges.</p>
+                    <div class="footer-socials">
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                            </svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="1" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h5>Connect With Us</h5>
+                    <a href="tel:08022454991">080-22454991</a>
+                    <a href="tel:08026631169">080-26631169</a>
+                    <a href="tel:+919036020076">+91 9036020076</a>
+                    <a href="tel:18001208696">1800 120 8696 (Toll Free)</a>
+                    <a href="tel:+971502436552">+971 502436552 (Dubai)</a>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h5>Quick Links</h5>
+                    <a href="#why-us">Why Us?</a>
+                    <a href="#counselling">BAMS Counselling</a>
+                    <a href="#rank-predictor">NEET Rank Predictor</a>
+                    <a href="#colleges">Top Colleges</a>
+                </div>
+            </div>
+            <div class="footer-bottom mt-4">© 2025 LearnTech / bangalorestudy. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ============ NAV ============
+        const nav = document.getElementById('siteNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+        document.querySelectorAll('#navLinks a').forEach(a => {
+            a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+        });
+
+        // ============ MARQUEE ============
+        const marqueeItems = ['NEET-UG 2025', 'AACCC All-India Counselling', 'KEA Karnataka Counselling', '4 Rounds Per Body', 'Expert 1-on-1 Guidance', 'Post-Admission Support'];
+        const trackMarquee = document.getElementById('marqueeTrack');
+        const dot = '<svg viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"/></svg>';
+        trackMarquee.innerHTML = marqueeItems.map(t => `<span class="m-item">${dot}${t}</span>`).join('') + marqueeItems.map(t => `<span class="m-item">${dot}${t}</span>`).join('');
+
+        // ============ SCROLL ANIMATIONS ============
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        animateElements.forEach(el => observer.observe(el));
+
+        // ============ AACCC STRAY VACANCY ROUND ACCORDION ============
+        (function () {
+            const trigger = document.getElementById('aacccSvrTrigger');
+            const panel = document.getElementById('aacccSvrPanel');
+            if (!trigger || !panel) return;
+            function toggle() {
+                const isOpen = panel.classList.toggle('is-open');
+                trigger.setAttribute('aria-expanded', isOpen);
+            }
+            trigger.addEventListener('click', toggle);
+            trigger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggle();
+                }
+            });
+        })();
+
+        // ============ STAGE ACCORDIONS ============
+        document.querySelectorAll('[data-stage]').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('open');
+            });
+        });
+
+        // ============ PHASE TABS ============
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+
+        // ============ LEAD FORM ============
+        document.getElementById('leadForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thanks! Our team will reach out shortly.');
+            this.reset();
+        });
+
+        // ============ RANK PREDICTOR ============
+        document.getElementById('predictBtn').addEventListener('click', () => {
+            const attempted = parseInt(document.getElementById('attempted').value) || 0;
+            const correct = parseInt(document.getElementById('correct').value) || 0;
+            if (attempted <= 0 || correct < 0 || correct > attempted || attempted > 180) {
+                alert('Please enter valid attempted and correct values.');
+                return;
+            }
+            const wrong = attempted - correct;
+            const score = Math.max(0, correct * 4 - wrong * 1);
+            let tier = 'Borderline range — talk to a counsellor about backup options.';
+            if (score >= 550) tier = 'Strong range — a wide set of colleges should be within reach.';
+            else if (score >= 400) tier = 'Good range — several colleges likely within reach with the right strategy.';
+            document.getElementById('predScore').textContent = score + ' / 720';
+            document.getElementById('predTier').textContent = tier;
+            document.getElementById('predResult').classList.add('show');
+        });
+
+        // ============ COLLEGES CAROUSEL ============
+        (function () {
+            const colleges = [
+                { name: "KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya, PG Studies & Research Centre", city: "Belagavi", color: "var(--green)", icon: "leaf" },
+                { name: "Yenepoya Ayurveda Medical College and Hospital", city: "Mangalore", color: "var(--ink-soft)", icon: "shield" },
+                { name: "Amrutha Ayurvedic Medical College (AAMC)", city: "Chitradurga", color: "var(--rust)", icon: "pestle" },
+                { name: "Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital & Research Centre", city: "Bangalore", color: "var(--green)", icon: "pestle" },
+                { name: "Sharada Ayurveda Medical College and Hospital (SAMCH)", city: "Mangalore", color: "var(--ink-soft)", icon: "book" },
+                { name: "Sushrutha Ayurvedic Medical College & Hospital", city: "Bangalore", color: "var(--rust)", icon: "leaf" },
+                { name: "Ashwini Ayurvedic Medical College & Research Centre", city: "Tumkur", color: "var(--green)", icon: "shield" },
+                { name: "SDM College of Ayurveda & Hospital", city: "Udupi", color: "var(--ink-soft)", icon: "book" },
+                { name: "Atreya Ayurvedic Medical College, Hospital & Research Centre", city: "Bangalore", color: "var(--rust)", icon: "pestle" },
+                { name: "Shri Kalidas Ayurvedic Medical College and Hospital", city: "Badami", color: "var(--green)", icon: "leaf" },
+                { name: "Indian Institute of Ayurvedic Medicine & Research", city: "Bangalore", color: "var(--ink-soft)", icon: "shield" },
+                { name: "JSS Ayurveda Medical College", city: "Mysore", color: "var(--rust)", icon: "book" }
+            ];
+            const icons = {
+                leaf: '<svg viewBox="0 0 24 24"><path d="M12 2C7 2 3 6 3 11c0 6.5 6 11 9 11s9-4.5 9-11c0-5-4-9-9-9zm0 2.2c3.7 0 6.8 3 6.8 6.8 0 4.9-4.4 8.6-6.8 8.9V4.2z" opacity="0.35"/><path d="M12 3.5c-4.4 0-8 3.6-8 7.9 0 5.7 5.3 9.7 8 9.9V3.5z"/></svg>',
+                shield: '<svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.2 3.4 9.9 8 11 4.6-1.1 8-5.8 8-11V5l-8-3z" opacity="0.9"/><path d="M12 2 4 5v6c0 5.2 3.4 9.9 8 11V2z" opacity="0.35"/></svg>',
+                pestle: '<svg viewBox="0 0 24 24"><ellipse cx="12" cy="17" rx="8" ry="4" opacity="0.35"/><path d="M8 16c0-3.5 2-9 4-11 1 2 1 3 2 3 1.5 0 2-1.5 3-1-1 3-1 6.5-3 9-1.5 1.5-4.5 1.5-6 0z"/></svg>',
+                book: '<svg viewBox="0 0 24 24"><path d="M4 4.5C4 3.7 4.7 3 5.5 3H12v18H5.5c-.8 0-1.5-.7-1.5-1.5v-15z" opacity="0.9"/><path d="M20 4.5c0-.8-.7-1.5-1.5-1.5H12v18h6.5c.8 0 1.5-.7 1.5-1.5v-15z" opacity="0.5"/></svg>'
+            };
+            const pinSvg = '<svg viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>';
+            const track = document.getElementById('ccTrack');
+            const carousel = document.getElementById('ccCarousel');
+            const N = colleges.length;
+            const tripled = [...colleges, ...colleges, ...colleges];
+            track.innerHTML = tripled.map(c => `<div class="cc-card"><div class="cc-logo" style="background:${c.color}">${icons[c.icon]}</div><h3 class="cc-name">${c.name}</h3><p class="cc-location">${pinSvg}${c.city}</p><a href="#" class="cc-btn">Enquire Now</a></div>`).join('');
+            let index = N;
+            let cardStep = 0;
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function measure() { const rect = track.children[0]?.getBoundingClientRect(); if (!rect) return; const gap = 24; cardStep = rect.width + gap; goTo(index, false); }
+            function goTo(i, animate) { if (!animate) track.classList.add('cc-no-transition'); track.style.transform = `translateX(${-i * cardStep}px)`; if (!animate) { void track.offsetHeight; track.classList.remove('cc-no-transition'); } }
+            function normalize() { if (index >= N * 2) { index -= N; goTo(index, false); } else if (index < N) { index += N; goTo(index, false); } }
+            function next() { index += 1; goTo(index, !reducedMotion); }
+            function prev() { index -= 1; goTo(index, !reducedMotion); }
+            track.addEventListener('transitionend', normalize);
+            let autoplayTimer = null;
+            function startAutoplay() { if (reducedMotion) return; stopAutoplay(); autoplayTimer = setInterval(next, 3200); }
+            function stopAutoplay() { if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } }
+            function restartAutoplay() { stopAutoplay(); startAutoplay(); }
+            document.getElementById('ccNext').addEventListener('click', () => { next(); restartAutoplay(); });
+            document.getElementById('ccPrev').addEventListener('click', () => { prev(); restartAutoplay(); });
+            carousel.addEventListener('mouseenter', stopAutoplay);
+            carousel.addEventListener('mouseleave', startAutoplay);
+            let touchStartX = 0;
+            carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; stopAutoplay(); }, { passive: true });
+            carousel.addEventListener('touchend', e => { const diff = touchStartX - e.changedTouches[0].clientX; if (Math.abs(diff) > 40) diff > 0 ? next() : prev(); startAutoplay(); }, { passive: true });
+            let resizeTimer;
+            window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(measure, 150); });
+            window.addEventListener('load', () => { measure(); startAutoplay(); });
+            if (document.readyState === 'complete') { measure(); startAutoplay(); }
+        })();
+    </script>
+</body>
+
+</html>
