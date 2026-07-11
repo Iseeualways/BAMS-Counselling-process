@@ -42,7 +42,7 @@
         }
 
         * {
-          
+
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -63,7 +63,7 @@
             scroll-padding-top: 96px;
         }
 
-         body {
+        body {
             font-family: var(--sans);
             background: var(--white);
             color: var(--ink);
@@ -1432,6 +1432,8 @@
             }
         }
 
+        
+
         @media(max-width:575px) {
             .cc-carousel {
                 -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
@@ -1474,10 +1476,20 @@
             .nav-cta {
                 display: none;
             }
-            
+
             .nav-inner {
                 padding: 10px;
             }
+        }
+
+        @media (max-width:768px) {
+
+            #stages-heading,
+            #stages-heading h2,
+            #stages-heading p {
+                text-align: left !important;
+            }
+
         }
     </style>
 </head>
@@ -2160,7 +2172,7 @@
     <!-- ============ AIQ STAGES ============ -->
     <section class="stages-section">
         <div class="wrap">
-            <div class="section-head center animate-on-scroll">
+            <div id="stages-heading"  class="section-head center animate-on-scroll">
                 <h2>All India NEET UG BAMS Counselling 2026 Stages</h2>
                 <p>The All India BAMS counselling process conducted by the Ayush Admissions Central Counselling
                     Committee (AACCC) consists of multiple stages. While the counselling schedule varies for each round,
@@ -3164,7 +3176,7 @@
     <!-- ============ KEA STAGES ============ -->
     <section class="kea-section" style="padding-top:0;">
         <div class="wrap">
-            <div class="section-head text-center animate-on-scroll">
+            <div id="stages-heading"  class="section-head text-center animate-on-scroll">
                 <h2>KEA NEET UG AYUSH Counselling 2026 Stages</h2>
                 <p>The Karnataka Examinations Authority (KEA) conducts the AYUSH counselling process through multiple
                     stages. Candidates must complete each stage within the prescribed timeline to remain eligible for
@@ -3498,6 +3510,8 @@
             }
         }
 
+        
+
         /* ---------- important note ---------- */
         .docs-note {
             display: flex;
@@ -3527,6 +3541,14 @@
         .docs-note strong {
             color: var(--rust);
         }
+        @media (max-width: 768px) {
+
+    .docs-title,
+    .docs-title + p {
+        text-align: left !important;
+    }
+
+}
     </style>
 
 
