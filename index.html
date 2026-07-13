@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEET-UG BAMS Counselling Process 2026 | LearnTech</title>
+    <title>NEET-UG BAMS Counselling 2025 | LearnTech</title>
     <!-- Google Font & Bootstrap 5 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -601,7 +601,7 @@
         .lead-card {
             background: var(--white);
             border-radius: 22px;
-            padding: 34px 30px;
+            padding: 24px 30px;
             box-shadow: var(--shadow-lg);
             border: 1px solid rgba(255, 255, 255, 0.6);
             animation: fadeUp 0.8s ease 0.3s forwards;
@@ -896,7 +896,7 @@
             flex: 1;
             background: var(--white);
             border-radius: 16px;
-            padding: 12px 26px;
+            padding: 12px 16px;
             border-bottom: 3px solid rgba(0, 45, 68, 0.278);
             cursor: pointer;
             transition: box-shadow .3s ease, transform .3s ease, border-color .3s ease;
@@ -908,7 +908,6 @@
 
         .stage-card:hover {
             box-shadow: var(--shadow-md);
-            transform: translateY(-3px);
             border-color: var(--green-light);
         }
 
@@ -1067,7 +1066,7 @@
         .predictor-panel {
             background: var(--white);
             border-radius: 24px;
-            padding:14px 24px;
+            padding: 14px 24px;
             box-shadow: var(--shadow-lg);
             border: 1px solid var(--line);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1131,7 +1130,7 @@
         .field input,
         .field select {
             width: 100%;
-            padding: 12px 14px;
+            padding: 10px 14px;
             border-radius: 10px;
             border: 1px solid var(--line);
             background: var(--white);
@@ -1228,7 +1227,7 @@
         .cta-content {
             position: relative;
             z-index: 2;
-            max-width: 1300px;
+            max-width: 1400px;
             text-align: center;
             padding: 0 20px;
         }
@@ -1362,8 +1361,12 @@
                 margin-bottom: 6px;
             }
 
+            .predictor-form {
+                padding: 16px;
+            }
+
             .predictor-panel {
-                padding: 24px;
+                padding: 12px;
             }
 
             .cc-card {
@@ -3811,6 +3814,13 @@
                             margin-bottom: 20px;
                         }
 
+                        /* Reduce heading size on small screens */
+                        @media (max-width: 767px) {
+                            .predictor-form-heading {
+                                font-size: 30px;
+                            }
+                        }
+
                         .predictor-form-subheading {
                             display: block;
                             font-size: 16px;
@@ -3848,7 +3858,8 @@
                 </div>
 
                 <div class="col-md-6 predictor-form">
-                    <h5 class="text-center mb-4"><strong>Calculate Your Expected NEET UG 2026 Rank Using the NTA Provisional Answer Key
+                    <h5 class="text-center mb-4"><strong>This Predictor Works Best Once NTA Releases the Provisional
+                            Answer Key
                         </strong></h5>
                     <form id="predictorForm" novalidate>
                         <div class="pred-row">
@@ -4283,7 +4294,7 @@
             <div class="row align-items-start g-5">
                 <div class="col-lg-4">
                     <div class="faq-heading">
-                        <h2>Frequently<br>Asked<br>Questions</h2>
+                        <h2>Frequently Asked Questions</h2>
                         <p>
                             Find answers to the most common questions about
                             BAMS Counselling 2026.
@@ -4444,114 +4455,76 @@
 
     <style>
         /*================ FAQ =================*/
-
         .faq-section {
             background: var(--white);
         }
 
         .faq-heading {
-
             top: 110px;
-
         }
 
         .faq-label {
-
             display: inline-flex;
             align-items: center;
             gap: 8px;
-
             padding: 8px 16px;
-
             border-radius: 50px;
-
             background: var(--sage);
-
             color: var(--ink-soft);
-
             font-size: 14px;
             font-weight: 600;
-
             margin-bottom: 18px;
-
         }
 
         .faq-label i {
-
             color: var(--gold);
-
         }
 
         .faq-heading h2 {
-
             font-size: clamp(2.2rem, 5vw, 4.2rem);
-
             line-height: 1;
-
             font-weight: 700;
-
             color: var(--ink);
-
             margin-bottom: 18px;
 
         }
 
         .faq-heading p {
-
             color: var(--muted);
-
             font-size: 16px;
-
             line-height: 1.8;
-
             max-width: 280px;
-
         }
 
         /* accordion */
 
         .faq-accordion {
-
             display: flex;
             flex-direction: column;
             gap: 14px;
-
         }
 
         .faq-accordion .accordion-item {
-
             border: none;
-
             border-radius: 18px !important;
-
             overflow: hidden;
-
             background: var(--cream);
-
             box-shadow: var(--shadow-sm);
 
         }
 
         .faq-accordion .accordion-button {
-
             background: transparent;
-
             color: var(--ink);
-
             font-size: 18px;
-
             font-weight: 600;
-
             padding: 22px 24px;
-
             box-shadow: none;
 
         }
 
         .faq-accordion .accordion-button:not(.collapsed) {
-
             background: var(--cream-2);
-
             color: var(--ink);
 
         }
@@ -4559,24 +4532,16 @@
         .faq-accordion .accordion-button::after {
             width: 34px;
             height: 34px;
-
             border-radius: 50%;
-
             background: var(--gold);
-
             content: "+";
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             color: #fff;
-
             font-size: 22px;
             font-weight: 400;
-
             background-image: none;
-
             transition: .3s;
         }
 
@@ -4585,17 +4550,11 @@
         }
 
         .faq-accordion .accordion-body {
-
             padding: 22px 24px;
-
             font-size: 16px;
-
             color: var(--muted);
-
             line-height: 1.8;
-
             background: var(--white);
-
             border-top: 1px solid var(--line);
 
         }
@@ -4603,17 +4562,12 @@
         /* hover */
 
         .accordion-item {
-
             transition: .3s;
-
         }
 
         .accordion-item:hover {
-
             transform: translateY(-3px);
-
             box-shadow: var(--shadow-md);
-
         }
 
         /*================ Mobile ================*/
@@ -4621,22 +4575,16 @@
         @media(max-width:991px) {
 
             .faq-heading {
-
                 position: relative !important;
                 top: auto;
-
-                margin-bottom: 20px;
-
+                margin-bottom: 10px;
             }
 
             .faq-heading h2 {
-
                 font-size: 42px;
-
             }
 
             .faq-heading p {
-
                 max-width: 100%;
 
             }
@@ -4644,41 +4592,28 @@
         }
 
         @media(max-width:576px) {
-
             .faq-section {
-
                 padding: 70px 0;
 
             }
 
             .faq-heading h2 {
-
                 font-size: 34px;
-
                 line-height: 1.1;
-
             }
 
             .faq-heading p {
-
                 font-size: 15px;
-
             }
 
             .faq-accordion .accordion-button {
-
                 font-size: 16px;
-
                 padding: 18px;
-
             }
 
             .faq-accordion .accordion-body {
-
                 padding: 18px;
-
                 font-size: 15px;
-
             }
 
         }
