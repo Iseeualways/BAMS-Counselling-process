@@ -944,7 +944,7 @@
         }
 
         .stage-top h4 {
-            font-size: 22px;
+            font-size: 24px;
             line-height: 1.3;
             font-weight: 700;
 
@@ -976,14 +976,11 @@
         }
 
         .stage-body {
-            max-height: 0;
-            overflow: hidden;
+            max-height: none;
+            overflow: visible;
             transition: max-height .4s ease;
         }
 
-        .stage-card.open .stage-body {
-            max-height: 600px;
-        }
 
         .stage-card,
         .stage-card * {
@@ -1062,6 +1059,7 @@
         }
 
         /* ===================== RANK PREDICTOR ===================== */
+        /* ===================== RANK PREDICTOR ===================== */
         .predictor-section {
             background: linear-gradient(135deg, var(--sage) 0%, var(--cream) 100%);
         }
@@ -1073,7 +1071,6 @@
             box-shadow: var(--shadow-lg);
             border: 1px solid var(--line);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-
         }
 
         .predictor-panel:hover {
@@ -1081,9 +1078,14 @@
             box-shadow: 0 30px 70px rgba(79, 124, 255, 0.15);
         }
 
-        .predictor-copy h3 {
-            font-size: 24px;
+        .predictor-copy h2 {
+            font-size: 36px;
             margin-bottom: 12px;
+        }
+
+        .predictor-copy h6 {
+            color: var(--muted);
+            font-weight: 600;
         }
 
         .predictor-copy p {
@@ -1108,55 +1110,90 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
+        }
+
+        .field {
             margin-bottom: 14px;
         }
 
-        .pred-result {
-            margin-top: 18px;
-            padding: 18px 20px;
-            border-radius: 12px;
-            background: var(--green);
-            color: var(--cream);
-            display: none;
-            animation: fadeUp 0.5s ease;
-        }
-
-        .pred-result.show {
+        .field label {
             display: block;
-        }
-
-        .pred-result .score {
-            font-family: var(--mono);
-            font-size: 28px;
-            font-weight: 600;
-            animation: pulse 2s infinite;
-        }
-
-        .pred-result .tier {
             font-size: 13px;
-            margin-top: 6px;
-            color: var(--gold-light);
             font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 6px;
         }
 
-        .pred-result .note {
+        .field .req {
+            color: var(--rust);
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: var(--white);
+            font-size: 14.5px;
+            color: var(--ink);
+            appearance: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.5 7.5l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 14px;
+            cursor: pointer;
+        }
+
+        .field input:focus,
+        .field select:focus {
+            outline: none;
+            border-color: var(--rust);
+            box-shadow: 0 0 0 3px rgba(239, 70, 126, 0.12);
+        }
+
+        .field input.invalid,
+        .field select.invalid {
+            border-color: #e14848;
+            background: #fff5f5;
+        }
+
+        .error-msg {
+            display: block;
+            color: #e14848;
+            font-size: 0;
+            line-height: 0;
+            transition: font-size 0.15s ease;
+        }
+
+        .error-msg:not(:empty) {
             font-size: 12px;
-            margin-top: 8px;
-            color: rgba(251, 246, 236, 0.7);
+            line-height: 1.4;
+            margin-top: 4px;
         }
 
         #predictBtn {
+            width: 100%;
             transition: all 0.3s ease;
             animation: pulseGlow 2.5s infinite;
         }
 
         #predictBtn:hover {
             animation: none;
-            transform: translateY(-3px) scale(1.02);
+            transform: scale(1.02);
             box-shadow: 0 10px 30px rgba(239, 70, 126, 0.4);
         }
 
-
+       
+        @media (max-width: 768px) {
+            .pred-row {
+                grid-template-columns: 1fr;
+            }
+        }
 
         /*================ CTA ================*/
 
@@ -1434,7 +1471,7 @@
             }
         }
 
-        
+
 
         @media(max-width:575px) {
             .cc-carousel {
@@ -1510,7 +1547,7 @@
                 <a href="#counselling">BAMS Counselling</a>
                 <a href="#rank-predictor">NEET Rank Predictor</a>
                 <a href="#colleges">Top Colleges</a>
-                <a href="#faqs">FAQs</a>
+                <a href="#faq">FAQs</a>
                 <a href="#contact">Contact Us</a>
             </nav>
             <div style="display:flex;align-items:center;gap:14px;">
@@ -2174,7 +2211,7 @@
     <!-- ============ AIQ STAGES ============ -->
     <section class="stages-section">
         <div class="wrap">
-            <div id="stages-heading"  class="section-head center animate-on-scroll">
+            <div id="stages-heading" class="section-head center animate-on-scroll">
                 <h2>All India NEET UG BAMS Counselling 2026 Stages</h2>
                 <p>The All India BAMS counselling process conducted by the Ayush Admissions Central Counselling
                     Committee (AACCC) consists of multiple stages. While the counselling schedule varies for each round,
@@ -3178,7 +3215,7 @@
     <!-- ============ KEA STAGES ============ -->
     <section class="kea-section" style="padding-top:0;">
         <div class="wrap">
-            <div id="stages-heading"  class="section-head text-center animate-on-scroll">
+            <div id="stages-heading" class="section-head text-center animate-on-scroll">
                 <h2>KEA NEET UG AYUSH Counselling 2026 Stages</h2>
                 <p>The Karnataka Examinations Authority (KEA) conducts the AYUSH counselling process through multiple
                     stages. Candidates must complete each stage within the prescribed timeline to remain eligible for
@@ -3512,7 +3549,7 @@
             }
         }
 
-        
+
 
         /* ---------- important note ---------- */
         .docs-note {
@@ -3543,14 +3580,15 @@
         .docs-note strong {
             color: var(--rust);
         }
+
         @media (max-width: 768px) {
 
-    .docs-title,
-    .docs-title + p {
-        text-align: left !important;
-    }
+            .docs-title,
+            .docs-title+p {
+                text-align: left !important;
+            }
 
-}
+        }
     </style>
 
 
@@ -3752,55 +3790,155 @@
     </script>
 
 
+
+    <!-- ============ RANK PREDICTOR ============ -->
     <!-- ============ RANK PREDICTOR ============ -->
     <section class="predictor-section" id="rank-predictor">
         <div class="wrap">
-            <div class="predictor-panel row g-4 align-items-center animate-on-scroll">
+            <div class="predictor-panel row g-4  animate-on-scroll">
                 <div class="col-md-6 predictor-copy">
-                    <h2>BAMS NEET UG 2026 Rank Predictor</h2>
-                    <h6 class="mb-4">Estimate Your Expected NEET UG 2026 Rank For BAMS Admissions
-                    </h6>
+                    <h3 class="predictor-form-heading">
+                        BAMS NEET UG 2026 Rank Predictor
+                        <span class="predictor-form-subheading">Estimate Your Expected Rank for Admissions <mark>Based
+                                on 180 Questions</mark></span>
+                    </h3>
+                    <style>
+                        .predictor-form-heading {
+                            font-size: 34px;
+                            font-weight: 700;
+                            color: var(--ink);
+                            line-height: 1.4;
+                            margin-bottom: 20px;
+                        }
+
+                        .predictor-form-subheading {
+                            display: block;
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: var(--muted);
+                            margin-top: 6px;
+                        }
+
+                        .predictor-form-heading mark {
+                            background: var(--gold);
+                            color: var(--cream);
+                            padding: 1px 8px;
+                            border-radius: 5px;
+                            font-weight: 700;
+                        }
+                    </style>
                     <p>Estimate your probable NEET UG 2026 rank based on your exam performance. The predictor gives you
                         an early understanding of where you may stand among other aspirants and helps you evaluate your
                         BAMS admission opportunities. A reliable rank estimate can help you prepare for the counselling
                         process in advance. Use it to explore suitable colleges, prioritise your preferences, and build
                         a well informed counselling strategy for AACCC and State AYUSH admissions.
                     </p>
+                    <div class="docs-note" role="alert">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="color:var(--rust)">
+                            <path
+                                d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p><strong>Note: </strong>This prediction is generated using previous years' NEET UG data and
+                            exam
+                            trends. The final NEET UG 2026 rank may differ from the estimated result.
+                        </p>
+                    </div>
                 </div>
+
                 <div class="col-md-6 predictor-form">
-                    <div class="pred-row">
-                        <div class="field" style="margin-bottom:0;"><label>Out of 180 Questions</label><input
-                                type="number" value="180" disabled></div>
-                        <div class="field" style="margin-bottom:0;"><label>Questions Attempted</label><input
-                                type="number" id="attempted" placeholder="N0. of Questions Attempted" min="0" max="180"></div>
-                    </div>
-                    <div class="field"><label>Correct Answers</label><input type="number" id="correct"
-                            placeholder="No. of Correct Answers" min="0" max="180"></div>
-                    <button class="form-submit" id="predictBtn" style="background:var(--rust);">Predict My
-                        Score</button>
-                    <div class="pred-result" id="predResult">
-                        <div class="score" id="predScore">—</div>
-                        <div class="tier" id="predTier"></div>
-                        <div class="note">Estimate based on standard NEET marking (+4 / −1). Actual rank depends on the
-                            year's difficulty and cutoffs — talk to a counsellor for a precise read.</div>
-                    </div>
+
+                    <form id="predictorForm" novalidate>
+                        <div class="pred-row">
+                            <div class="field">
+                                <label for="attempted">Questions Attempted <span class="req">*</span></label>
+                                <input type="number" id="attempted" min="0" max="180" placeholder="e.g. 170">
+                                <span class="error-msg" id="err-attempted"></span>
+                            </div>
+                            <div class="field">
+                                <label for="correct">Correct Answers <span class="req">*</span></label>
+                                <input type="number" id="correct" min="0" max="180" placeholder="e.g. 150">
+                                <span class="error-msg" id="err-correct"></span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+
+                            <label for="category">Category <span class="req">*</span></label>
+                            <select id="category">
+                                <option value="" disabled selected>Select category</option>
+                                <option value="General">General</option>
+                                <option value="EWS">EWS</option>
+                                <option value="OBC-NCL">OBC-NCL</option>
+                                <option value="SC">SC</option>
+                                <option value="ST">ST</option>
+                                <option value="PwD">PwD</option>
+                            </select>
+                            <span class="error-msg" id="err-category"></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="domicile">Domicile State <span class="req">*</span></label>
+                            <select id="domicile">
+                                <option value="" disabled selected>Select State of Eligibility</option>
+
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                            <span class="error-msg" id="err-domicile"></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="quota">Quota Preference <span class="req">*</span></label>
+                            <select id="quota">
+                                <option value="AACCC" selected>All India quota (AACCC)</option>
+                                <option value="State">State quota</option>
+                                <option value="Management">Management / NRI quota</option>
+                            </select>
+                            <span class="error-msg" id="err-quota"></span>
+                        </div>
+
+                        <button type="submit" class="form-submit" id="predictBtn"
+                            style="background:var(--rust);">Predict My Score</button>
+
+                        
+                    </form>
                 </div>
-                <div class="docs-note" role="alert">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        style="color:var(--rust)">
-                        <path
-                            d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <p><strong>Note: </strong>This prediction is generated using previous years' NEET UG data and exam
-                        trends. The final NEET UG 2026 rank may differ from the estimated result.
-                    </p>
-                </div>
+
+
             </div>
-
         </div>
-
     </section>
+
+
+
 
     <style>
         .cc-section {
@@ -3838,35 +3976,24 @@
             margin-bottom: 40px;
         }
 
-        /* Carousel viewport */
-        .cc-carousel {
-            overflow: hidden;
-            position: relative;
-            -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
-            mask-image: linear-gradient(90deg, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
-        }
-
-        .cc-track {
-            display: flex;
+        /* Grid */
+        .cc-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
             gap: var(--gap);
-            will-change: transform;
-            transition: transform 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
-        }
-
-        .cc-track.cc-no-transition {
-            transition: none !important;
         }
 
         .cc-card {
-            flex: 0 0 calc(25% - (var(--gap) * 3 / 4));
-            background: linear-gradient(135deg, var(--card-bg), rgba(32, 100, 189, 0.108));
+            background: linear-gradient(135deg, var(--card-bg), rgba(187, 187, 187, 0.702));
+            border: 0px 3px 3px 0px solid black;
             border-radius: var(--radius);
-            padding: 22px 24px 28px;
+            padding: 22px 20px 26px;
             text-align: center;
             box-shadow: var(--shadow-rest);
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: 100%;
             transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
 
@@ -3876,8 +4003,8 @@
         }
 
         .cc-logo {
-            width: 136px;
-            height: 136px;
+            width: 112px;
+            height: 112px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -3897,12 +4024,12 @@
         }
 
         .cc-name {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 500;
             color: var(--ink);
             line-height: 1.4;
-            margin-bottom: 16px;
-            min-height: 88px;
+            margin-bottom: 14px;
+            min-height: 68px;
             display: flex;
             align-items: center;
         }
@@ -3913,8 +4040,8 @@
             gap: 6px;
             color: var(--ink);
             font-weight: 500;
-            font-size: 0.96rem;
-            margin-bottom: 22px;
+            font-size: 0.92rem;
+            margin-bottom: 20px;
         }
 
         .cc-location svg {
@@ -3925,13 +4052,14 @@
         }
 
         .cc-btn {
+            margin-top: auto;
             background: var(--navy);
             color: #fff;
             border: none;
-            padding: 11px 30px;
+            padding: 11px 26px;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             text-decoration: none;
             transition: background 0.25s ease, transform 0.25s ease;
             display: inline-block;
@@ -3943,59 +4071,21 @@
             transform: translateY(-2px);
         }
 
-        /* Arrow controls */
-        .cc-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 18px;
-            margin-top: 40px;
-        }
-
-        .cc-arrow {
-            width: 38px;
-            height: 38px;
-            border-radius: 10%;
-            border: 1.5px solid rgba(27, 42, 107, 0.18);
-            background: #fff;
-            color: var(--navy);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease, border-color 0.25s ease;
-        }
-
-        .cc-arrow svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        .cc-arrow:hover {
-            background: var(--navy);
-            color: #fff;
-            border-color: var(--navy);
-        }
-
-        .cc-arrow:active {
-            transform: scale(0.92);
-        }
-
-        .cc-arrow:focus-visible {
-            outline: 2px solid var(--navy);
-            outline-offset: 2px;
-        }
-
-        /* Responsive per-view counts */
-        @media (max-width:1199px) {
-            .cc-card {
-                flex-basis: calc(33.333% - (var(--gap) * 2 / 3));
+        @media (max-width:1399px) {
+            .cc-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
         }
 
-        @media (max-width:991px) {
-            .cc-card {
-                flex-basis: calc(50% - (var(--gap) / 2));
+        @media (max-width:1199px) {
+            .cc-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width:767px) {
+            .cc-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .cc-name {
@@ -4003,421 +4093,191 @@
             }
         }
 
-        @media (max-width:575px) {
-            :root {
-                --gap: var(--gap-sm);
-            }
-
-            .cc-card {
-                flex-basis: 100%;
-                padding: 26px 20px 24px;
-            }
-
+        @media (max-width:480px) {
             .cc-section {
+                --gap: var(--gap-sm);
                 padding: 48px 12px 56px;
             }
 
-            .cc-carousel {
-                -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
-                mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .cc-track {
-                transition: none;
-            }
-
-            .cc-card {
-                transition: none;
+            .cc-grid {
+                grid-template-columns: repeat(1, 1fr);
             }
         }
     </style>
-
 
     <section class="cc-section" id="colleges">
         <div class="cc-container">
             <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
                 <h2>Top Colleges</h2>
-                <p>Below is a list of some of the top AYUSH counselling-participating colleges in Karnataka.
-                </p>
+                <p>Below is a list of some of the top AYUSH counselling-participating colleges in Karnataka.</p>
             </div>
 
-            <div class="cc-carousel" id="ccCarousel">
-                <div class="cc-track" id="ccTrack">
+            <div class="cc-grid">
 
-                    <!-- ===== Copy A (cards 1-12) ===== -->
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/KAHER’s Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate Studies and Research Centre.webp"
-                                alt="KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya, PG Studies &amp;
-                            Research Centre</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Belagavi</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Yenepoya Ayurveda Medical College and Hospital.webp"
-                                alt="Yenepoya Ayurveda Medical College and Hospital logo" width="76" height="76"></div>
-                        <h3 class="cc-name">Yenepoya Ayurveda Medical College and Hospital</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Mangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img src="college-logos/Amrutha Ayurvedic Medical College (AAMC).webp"
-                                alt="Amrutha Ayurvedic Medical College logo" width="76" height="76"></div>
-                        <h3 class="cc-name">Amrutha Ayurvedic Medical College (AAMC)</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Chitradurga</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and Research Centre (SKAMCH & RC).webp"
-                                alt="Sri Kalabyraveshwara Swamy Ayurvedic Medical College logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital &amp;
-                            Research Centre</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Bangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Sharada Ayurveda Medical College and Hospital (SAMCH).webp"
-                                alt="Sharada Ayurveda Medical College and Hospital logo" width="76" height="76"></div>
-                        <h3 class="cc-name">Sharada Ayurveda Medical College and Hospital (SAMCH)</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Mangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Sushrutha Ayurvedic Medical College & Hospital.webp"
-                                alt="Sushrutha Ayurvedic Medical College and Hospital logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Sushrutha Ayurvedic Medical College &amp; Hospital</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Bangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Ashwini Ayurvedic Medical College & Research Centre.webp"
-                                alt="Ashwini Ayurvedic Medical College and Research Centre logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Ashwini Ayurvedic Medical College &amp; Research Centre</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Tumkur</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img src="college-logos/SDM College of Ayurveda & Hospital.webp"
-                                alt="SDM College of Ayurveda and Hospital logo" width="76" height="76"></div>
-                        <h3 class="cc-name">SDM College of Ayurveda &amp; Hospital</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Udupi</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Atreya Ayurvedic Medical College Hospital & Research Centre.webp"
-                                alt="Atreya Ayurvedic Medical College Hospital and Research Centre logo" width="76"
-                                height="76"></div>
-                        <h3 class="cc-name">Atreya Ayurvedic Medical College, Hospital &amp; Research Centre</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Bangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Shri Kalidas Ayurvedic Medical College and Hospital.webp"
-                                alt="Shri Kalidas Ayurvedic Medical College and Hospital logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Shri Kalidas Ayurvedic Medical College and Hospital</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Badami</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Indian Institute of Ayurvedic Medicine & Research.webp"
-                                alt="Indian Institute of Ayurvedic Medicine and Research logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Indian Institute of Ayurvedic Medicine &amp; Research</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Bangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img src="college-logos/JSS Ayurveda Medical College.webp"
-                                alt="JSS Ayurveda Medical College logo" width="76" height="76"></div>
-                        <h3 class="cc-name">JSS Ayurveda Medical College</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Mysore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-
-                    <div class="cc-card">
-                        <div class="cc-logo"><img src="college-logos/sscasrh-logo.png"
-                                alt="JSS Ayurveda Medical College logo" width="76" height="76"></div>
-                        <h3 class="cc-name">Sri Sri College of Ayurvedic Science & Research (Sri Sri Ayurveda),
-                            Bengaluru</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Mysore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-
-                    <!-- ===== Copy B (cards 1-12) ===== -->
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/KAHER’s Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate Studies and Research Centre.webp"
-                                alt="KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya, PG Studies &amp;
-                            Research Centre</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Belagavi</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Yenepoya Ayurveda Medical College and Hospital.webp"
-                                alt="Yenepoya Ayurveda Medical College and Hospital logo" width="76" height="76"></div>
-                        <h3 class="cc-name">Yenepoya Ayurveda Medical College and Hospital</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Mangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img src="college-logos/Amrutha Ayurvedic Medical College (AAMC).webp"
-                                alt="Amrutha Ayurvedic Medical College logo" width="76" height="76"></div>
-                        <h3 class="cc-name">Amrutha Ayurvedic Medical College (AAMC)</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Chitradurga</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and Research Centre (SKAMCH & RC).webp"
-                                alt="Sri Kalabyraveshwara Swamy Ayurvedic Medical College logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital &amp;
-                            Research Centre</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Bangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Sharada Ayurveda Medical College and Hospital (SAMCH).webp"
-                                alt="Sharada Ayurveda Medical College and Hospital logo" width="76" height="76"></div>
-                        <h3 class="cc-name">Sharada Ayurveda Medical College and Hospital (SAMCH)</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Mangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Sushrutha Ayurvedic Medical College & Hospital.webp"
-                                alt="Sushrutha Ayurvedic Medical College and Hospital logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Sushrutha Ayurvedic Medical College &amp; Hospital</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Bangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Ashwini Ayurvedic Medical College & Research Centre.webp"
-                                alt="Ashwini Ayurvedic Medical College and Research Centre logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Ashwini Ayurvedic Medical College &amp; Research Centre</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Tumkur</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img src="college-logos/SDM College of Ayurveda & Hospital.webp"
-                                alt="SDM College of Ayurveda and Hospital logo" width="76" height="76"></div>
-                        <h3 class="cc-name">SDM College of Ayurveda &amp; Hospital</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Udupi</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Atreya Ayurvedic Medical College Hospital & Research Centre.webp"
-                                alt="Atreya Ayurvedic Medical College Hospital and Research Centre logo" width="76"
-                                height="76"></div>
-                        <h3 class="cc-name">Atreya Ayurvedic Medical College, Hospital &amp; Research Centre</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Bangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Shri Kalidas Ayurvedic Medical College and Hospital.webp"
-                                alt="Shri Kalidas Ayurvedic Medical College and Hospital logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Shri Kalidas Ayurvedic Medical College and Hospital</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Badami</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img
-                                src="college-logos/Indian Institute of Ayurvedic Medicine & Research.webp"
-                                alt="Indian Institute of Ayurvedic Medicine and Research logo" width="76" height="76">
-                        </div>
-                        <h3 class="cc-name">Indian Institute of Ayurvedic Medicine &amp; Research</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Bangalore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img src="college-logos/JSS Ayurveda Medical College.webp"
-                                alt="JSS Ayurveda Medical College logo" width="76" height="76"></div>
-                        <h3 class="cc-name">JSS Ayurveda Medical College</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Mysore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
-                    <div class="cc-card">
-                        <div class="cc-logo"><img src="college-logos/sscasrh-logo.png"
-                                alt="JSS Ayurveda Medical College logo" width="76" height="76"></div>
-                        <h3 class="cc-name">Sri Sri College of Ayurvedic Science & Research (Sri Sri Ayurveda),
-                            Bengaluru</h3>
-                        <p class="cc-location"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>Mysore</p>
-                        <a href="#" class="cc-btn">Enquire Now</a>
-                    </div>
+                <div class="cc-card">
+                    <div class="cc-logo"><img
+                            src="college-logos/KAHER’s Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate Studies and Research Centre.webp"
+                            alt="KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya logo" width="76" height="76"></div>
+                    <h3 class="cc-name">KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya, PG Studies &amp; Research
+                        Centre</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Belagavi</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
                 </div>
-            </div>
 
-            <div class="cc-controls">
-                <button class="cc-arrow" id="ccPrev" aria-label="Previous colleges">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-                <button class="cc-arrow" id="ccNext" aria-label="Next colleges">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
+                <div class="cc-card">
+                    <div class="cc-logo"><img src="college-logos/Yenepoya Ayurveda Medical College and Hospital.webp"
+                            alt="Yenepoya Ayurveda Medical College and Hospital logo" width="76" height="76"></div>
+                    <h3 class="cc-name">Yenepoya Ayurveda Medical College and Hospital</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Mangalore</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img src="college-logos/Amrutha Ayurvedic Medical College (AAMC).webp"
+                            alt="Amrutha Ayurvedic Medical College logo" width="76" height="76"></div>
+                    <h3 class="cc-name">Amrutha Ayurvedic Medical College (AAMC)</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Chitradurga</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img
+                            src="college-logos/Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and Research Centre (SKAMCH & RC).webp"
+                            alt="Sri Kalabyraveshwara Swamy Ayurvedic Medical College logo" width="76" height="76">
+                    </div>
+                    <h3 class="cc-name">Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital &amp; Research
+                        Centre</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Bangalore</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img
+                            src="college-logos/Sharada Ayurveda Medical College and Hospital (SAMCH).webp"
+                            alt="Sharada Ayurveda Medical College and Hospital logo" width="76" height="76"></div>
+                    <h3 class="cc-name">Sharada Ayurveda Medical College and Hospital (SAMCH)</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Mangalore</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img src="college-logos/Sushrutha Ayurvedic Medical College & Hospital.webp"
+                            alt="Sushrutha Ayurvedic Medical College and Hospital logo" width="76" height="76"></div>
+                    <h3 class="cc-name">Sushrutha Ayurvedic Medical College &amp; Hospital</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Bangalore</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img
+                            src="college-logos/Ashwini Ayurvedic Medical College & Research Centre.webp"
+                            alt="Ashwini Ayurvedic Medical College and Research Centre logo" width="76" height="76">
+                    </div>
+                    <h3 class="cc-name">Ashwini Ayurvedic Medical College &amp; Research Centre</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Tumkur</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img src="college-logos/SDM College of Ayurveda & Hospital.webp"
+                            alt="SDM College of Ayurveda and Hospital logo" width="76" height="76"></div>
+                    <h3 class="cc-name">SDM College of Ayurveda &amp; Hospital</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Udupi</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img
+                            src="college-logos/Atreya Ayurvedic Medical College Hospital & Research Centre.webp"
+                            alt="Atreya Ayurvedic Medical College Hospital and Research Centre logo" width="76"
+                            height="76"></div>
+                    <h3 class="cc-name">Atreya Ayurvedic Medical College, Hospital &amp; Research Centre</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Bangalore</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img
+                            src="college-logos/Shri Kalidas Ayurvedic Medical College and Hospital.webp"
+                            alt="Shri Kalidas Ayurvedic Medical College and Hospital logo" width="76" height="76"></div>
+                    <h3 class="cc-name">Shri Kalidas Ayurvedic Medical College and Hospital</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Badami</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img src="college-logos/Indian Institute of Ayurvedic Medicine & Research.webp"
+                            alt="Indian Institute of Ayurvedic Medicine and Research logo" width="76" height="76"></div>
+                    <h3 class="cc-name">Indian Institute of Ayurvedic Medicine &amp; Research</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Bangalore</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img src="college-logos/JSS Ayurveda Medical College.webp"
+                            alt="JSS Ayurveda Medical College logo" width="76" height="76"></div>
+                    <h3 class="cc-name">JSS Ayurveda Medical College</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Mysore</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
+                <div class="cc-card">
+                    <div class="cc-logo"><img src="college-logos/sscasrh-logo.png"
+                            alt="Sri Sri College of Ayurvedic Science and Research logo" width="76" height="76"></div>
+                    <h3 class="cc-name">Sri Sri College of Ayurvedic Science &amp; Research (Sri Sri Ayurveda),
+                        Bengaluru</h3>
+                    <p class="cc-location"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>Mysore</p>
+                    <a href="#" class="cc-btn">Enquire Now</a>
+                </div>
+
             </div>
         </div>
     </section>
-
-    <script>
-        (function () {
-            const track = document.getElementById('ccTrack');
-            const carousel = document.getElementById('ccCarousel');
-            const N = 13;
-            let index = N;
-            let step = 0;
-            let timer = null;
-
-            function go(i, animate) {
-                index = i;
-                track.style.transition = animate ? '' : 'none';
-                track.style.transform = `translateX(${-i * step}px)`;
-                if (!animate) void track.offsetHeight;
-            }
-
-            function measure() {
-                const first = track.children[0];
-                if (!first) return;
-                step = first.getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0);
-                go(index, false);
-            }
-
-            function next() { go(index + 1, true); }
-            function prev() { go(index - 1, true); }
-
-            track.addEventListener('transitionend', () => {
-                if (index >= N * 2) go(index - N, false);
-                else if (index < N) go(index + N, false);
-            });
-
-            function restart() {
-                clearInterval(timer);
-                timer = setInterval(next, 3200);
-            }
-
-            document.getElementById('ccNext').addEventListener('click', () => { next(); restart(); });
-            document.getElementById('ccPrev').addEventListener('click', () => { prev(); restart(); });
-            carousel.addEventListener('mouseenter', () => clearInterval(timer));
-            carousel.addEventListener('mouseleave', restart);
-            window.addEventListener('resize', measure);
-            window.addEventListener('load', () => { measure(); restart(); });
-        })();
-    </script>
 
 
 
     <!--==================== FAQ SECTION ====================-->
 
-    <section class="faq-section py-5">
+    <section class="faq-section py-5" id="faq">
         <div class="container">
             <div class="row align-items-start g-5">
                 <div class="col-lg-4">
@@ -4549,7 +4409,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq5">
 
-                                What support do I receive through personalised BAMS counselling 2026?
+                                    What support do I receive through personalised BAMS counselling 2026?
 
                                 </button>
 
@@ -4559,7 +4419,10 @@
 
                                 <div class="accordion-body">
 
-                                  Personalised BAMS counselling 2026 typically includes guidance on college selection, choice filling strategy, quota selection, counselling registration, document preparation, seat allotment decisions, and post allotment admission formalities. The guidance is tailored to your NEET UG rank, preferences, budget, and admission goals.
+                                    Personalised BAMS counselling 2026 typically includes guidance on college selection,
+                                    choice filling strategy, quota selection, counselling registration, document
+                                    preparation, seat allotment decisions, and post allotment admission formalities. The
+                                    guidance is tailored to your NEET UG rank, preferences, budget, and admission goals.
 
 
                                 </div>
@@ -4841,284 +4704,285 @@
     </section>
 
     <!-- ============ FOOTER ============ -->
-   <!-- ============ FOOTER ============ -->
-<footer class="footer">
-    <div class="wrap">
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" id="contact">
+        <div class="wrap">
 
-        <div class="footer-wrapper">
+            <div class="footer-wrapper">
 
-            <!-- Left -->
-            <div class="footer-left">
+                <!-- Left -->
+                <div class="footer-left">
 
-                <a href="#home" class="footer-logo">
-                    <img src="https://learntechww.com/images/footer650.webp" alt="LearnTech">
-                </a>
-
-                <p class="footer-tagline">
-                    Dream. Apply. Achieve. Our expert admission guidance is the bridge that connects you to a brighter future.
-                </p>
-
-            </div>
-
-            <!-- Right -->
-            <div class="footer-right">
-
-                <h4>Connect with us</h4>
-
-                <div class="footer-phone">
-
-                    <a href="tel:08022454991">
-                        <i class="fas fa-phone-alt"></i>
-                        080-22454991
+                    <a href="#home" class="footer-logo">
+                        <img src="https://learntechww.com/images/footer650.webp" alt="LearnTech">
                     </a>
 
-                    <a href="tel:08026631169">
-                        <i class="fas fa-phone-alt"></i>
-                        080-26631169
-                    </a>
+                    <p class="footer-tagline">
+                        Dream. Apply. Achieve. Our expert admission guidance is the bridge that connects you to a
+                        brighter future.
+                    </p>
 
                 </div>
 
-                <div class="footer-phone">
+                <!-- Right -->
+                <div class="footer-right">
 
-                    <a href="tel:+919036020076">
-                        <i class="fas fa-phone-alt"></i>
-                        +91 9036020076
-                    </a>
+                    <h4>Connect with us</h4>
 
-                    <a href="tel:18001208696">
-                        <i class="fas fa-phone-alt"></i>
-                        1800 120 8696 (Toll Free)
-                    </a>
+                    <div class="footer-phone">
 
-                </div>
+                        <a href="tel:08022454991">
+                            <i class="fas fa-phone-alt"></i>
+                            080-22454991
+                        </a>
 
-                <div class="footer-phone">
+                        <a href="tel:08026631169">
+                            <i class="fas fa-phone-alt"></i>
+                            080-26631169
+                        </a>
 
-                    <a href="tel:+971502436552">
-                        <i class="fas fa-phone-alt"></i>
-                        +971 502436552 (Dubai)
-                    </a>
+                    </div>
 
-                </div>
+                    <div class="footer-phone">
 
-                <div class="footer-social">
+                        <a href="tel:+919036020076">
+                            <i class="fas fa-phone-alt"></i>
+                            +91 9036020076
+                        </a>
 
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="tel:18001208696">
+                            <i class="fas fa-phone-alt"></i>
+                            1800 120 8696 (Toll Free)
+                        </a>
+
+                    </div>
+
+                    <div class="footer-phone">
+
+                        <a href="tel:+971502436552">
+                            <i class="fas fa-phone-alt"></i>
+                            +971 502436552 (Dubai)
+                        </a>
+
+                    </div>
+
+                    <div class="footer-social">
+
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    </div>
 
                 </div>
 
             </div>
 
         </div>
-
-    </div>
-</footer>
+    </footer>
 
     <style>
-    /*================ FOOTER ================*/
+        /*================ FOOTER ================*/
 
-.footer{
-    background:#1F3368;
-    padding:50px 0;
-}
+        .footer {
+            background: #1F3368;
+            padding: 50px 0;
+        }
 
-.footer-wrapper{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:70px;
-}
+        .footer-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 70px;
+        }
 
-/*================ LEFT ================*/
+        /*================ LEFT ================*/
 
-.footer-left{
-    flex:0 0 55%;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-}
+        .footer-left {
+            flex: 0 0 55%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
-.footer-logo{
-    display:block;
-    margin-bottom:18px;
-}
+        .footer-logo {
+            display: block;
+            margin-bottom: 18px;
+        }
 
-.footer-logo img{
-    width:100%;
-    max-width:370px;
-    display:block;
-    height:auto;
-}
+        .footer-logo img {
+            width: 100%;
+            max-width: 370px;
+            display: block;
+            height: auto;
+        }
 
-.footer-tagline{
-    margin-left: 20px;
-    max-width:620px;
-    color:rgba(255,255,255,.78);
-    font-size:16px;
-    line-height:1.8;
-    font-weight:400;
-}
+        .footer-tagline {
+            margin-left: 20px;
+            max-width: 620px;
+            color: rgba(255, 255, 255, .78);
+            font-size: 16px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
 
-/*================ RIGHT ================*/
+        /*================ RIGHT ================*/
 
-.footer-right{
-    flex:0 0 45%;
-    color:#fff;
-}
+        .footer-right {
+            flex: 0 0 45%;
+            color: #fff;
+        }
 
-.footer-right h4{
-    font-size:24px;
-    font-weight:600;
-    margin-bottom:22px;
-    color:#fff;
-}
+        .footer-right h4 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 22px;
+            color: #fff;
+        }
 
-/* Phone */
+        /* Phone */
 
-.footer-phone{
-    display:flex;
-    flex-wrap:wrap;
-    gap:16px;
-    margin-bottom:12px;
-}
+        .footer-phone {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
 
-.footer-phone a{
-    display:flex;
-    align-items:center;
-    gap:8px;
+        .footer-phone a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
 
-    color:#fff;
-    text-decoration:none;
+            color: #fff;
+            text-decoration: none;
 
-    font-size:15px;
-    font-weight:400;
+            font-size: 15px;
+            font-weight: 400;
 
-    transition:.3s ease;
-}
+            transition: .3s ease;
+        }
 
-.footer-phone a:hover{
-    color:#FFD54A;
-}
+        .footer-phone a:hover {
+            color: #FFD54A;
+        }
 
-.footer-phone i{
-    font-size:13px;
-    color:#FFD54A;
-}
+        .footer-phone i {
+            font-size: 13px;
+            color: #FFD54A;
+        }
 
-/* Social */
+        /* Social */
 
-.footer-social{
-    display:flex;
-    gap:14px;
-    margin-top:26px;
-}
+        .footer-social {
+            display: flex;
+            gap: 14px;
+            margin-top: 26px;
+        }
 
-.footer-social a{
-    width:40px;
-    height:40px;
+        .footer-social a {
+            width: 40px;
+            height: 40px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    border-radius:50%;
+            border-radius: 50%;
 
-    background:rgba(255,255,255,.08);
+            background: rgba(255, 255, 255, .08);
 
-    color:#fff;
+            color: #fff;
 
-    font-size:17px;
+            font-size: 17px;
 
-    transition:.3s ease;
-}
+            transition: .3s ease;
+        }
 
-.footer-social a:hover{
-    background:#fff;
-    color:#1F3368;
-    transform:translateY(-4px);
-}
+        .footer-social a:hover {
+            background: #fff;
+            color: #1F3368;
+            transform: translateY(-4px);
+        }
 
-/*================ TABLET ================*/
+        /*================ TABLET ================*/
 
-@media (max-width:991px){
+        @media (max-width:991px) {
 
-    .footer{
-        padding:45px 0;
-    }
+            .footer {
+                padding: 45px 0;
+            }
 
-    .footer-wrapper{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:40px;
-    }
+            .footer-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 40px;
+            }
 
-    .footer-left,
-    .footer-right{
-        flex:100%;
-        width:100%;
-    }
+            .footer-left,
+            .footer-right {
+                flex: 100%;
+                width: 100%;
+            }
 
-    .footer-logo img{
-        max-width:380px;
-    }
+            .footer-logo img {
+                max-width: 380px;
+            }
 
-    .footer-tagline{
-        max-width:100%;
-    }
+            .footer-tagline {
+                max-width: 100%;
+            }
 
-    .footer-phone{
-        flex-direction:column;
-        gap:12px;
-    }
+            .footer-phone {
+                flex-direction: column;
+                gap: 12px;
+            }
 
-}
+        }
 
-/*================ MOBILE ================*/
+        /*================ MOBILE ================*/
 
-@media (max-width:576px){
+        @media (max-width:576px) {
 
-    .footer{
-        padding:35px 0;
-    }
+            .footer {
+                padding: 35px 0;
+            }
 
-    .footer-wrapper{
-        gap:30px;
-    }
+            .footer-wrapper {
+                gap: 30px;
+            }
 
-    .footer-logo img{
-        max-width:300px;
-    }
+            .footer-logo img {
+                max-width: 300px;
+            }
 
-    .footer-tagline{
-        font-size:15px;
-        line-height:1.7;
-    }
+            .footer-tagline {
+                font-size: 15px;
+                line-height: 1.7;
+            }
 
-    .footer-right h4{
-        font-size:20px;
-        margin-bottom:18px;
-    }
+            .footer-right h4 {
+                font-size: 20px;
+                margin-bottom: 18px;
+            }
 
-    .footer-phone a{
-        font-size:15px;
-    }
+            .footer-phone a {
+                font-size: 15px;
+            }
 
-    .footer-social{
-        gap:12px;
-    }
+            .footer-social {
+                gap: 12px;
+            }
 
-    .footer-social a{
-        width:38px;
-        height:38px;
-        font-size:16px;
-    }
+            .footer-social a {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
 
-}
+        }
     </style>
 
     <!-- Bootstrap JS -->
@@ -5201,23 +5065,7 @@
         });
 
         // ============ RANK PREDICTOR ============
-        document.getElementById('predictBtn').addEventListener('click', () => {
-            const attempted = parseInt(document.getElementById('attempted').value) || 0;
-            const correct = parseInt(document.getElementById('correct').value) || 0;
-            if (attempted <= 0 || correct < 0 || correct > attempted || attempted > 180) {
-                alert('Please enter valid attempted and correct values.');
-                return;
-            }
-            const wrong = attempted - correct;
-            const score = Math.max(0, correct * 4 - wrong * 1);
-            let tier = 'Borderline range — talk to a counsellor about backup options.';
-            if (score >= 550) tier = 'Strong range — a wide set of colleges should be within reach.';
-            else if (score >= 400) tier = 'Good range — several colleges likely within reach with the right strategy.';
-            document.getElementById('predScore').textContent = score + ' / 720';
-            document.getElementById('predTier').textContent = tier;
-            document.getElementById('predResult').classList.add('show');
-        });
-
+       
 
     </script>
 </body>
